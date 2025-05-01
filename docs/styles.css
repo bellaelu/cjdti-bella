@@ -306,4 +306,50 @@ a:hover {
 
 #about li {
     margin-bottom: 1rem;
+}
+
+.partner-logos {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+    margin: 2rem 0;
+}
+
+.partner-logo-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.5rem;
+    background-color: #F9DCBF;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease;
+}
+
+.partner-logo-container:hover {
+    transform: scale(1.05);
+}
+
+.partner-logo {
+    max-width: 200px;
+    max-height: 100px;
+    object-fit: contain;
+}
+
+.partner-list {
+    text-align: center;
+    margin: 2rem 0;
+}
+
+.partner-list ul {
+    list-style-type: none;
+    padding: 0;
+    display: inline-block;
+    text-align: left;
+}
+
+.partner-list li {
+    margin-bottom: 0.5rem;
+    color: white;
 } 
