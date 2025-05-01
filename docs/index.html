@@ -19,7 +19,7 @@
         <section id="home">
             <div class="image-collage">
                 <div class="image-container">
-                    <img src="images/photos/alonzi-lu.jpg" alt="Professor Alonzi and student Isabella Lu">
+                    <img src="images/first/alonzi-lu.jpg" alt="Professor Alonzi and student Isabella Lu">
                 </div>
                 <div class="image-container">
                     <img src="images/photos/uvads-building-ext.jpg" alt="UVA Data Science Building Exterior">
@@ -35,6 +35,12 @@
                 </div>
                 <div class="image-container">
                     <img src="images/charts/county-map.png" alt="County Map">
+                </div>
+                <div class="image-container">
+                    <img src="images/papers/SIEDS-2025-ds.png" alt="SIEDS 2025 Data Science">
+                </div>
+                <div class="image-container">
+                    <img src="images/papers/SIEDS-2025-sys.png" alt="SIEDS 2025 Systems">
                 </div>
             </div>
         </section>
@@ -67,25 +73,44 @@
     </footer>
 
     <script>
-        function shuffleArray(array) {
-            for (let i = array.length - 1; i > 0; i--) {
-                const j = Math.floor(Math.random() * (i + 1));
-                [array[i], array[j]] = [array[j], array[i]];
-            }
-            return array;
-        }
-
         function shuffleImages() {
             const collage = document.querySelector('.image-collage');
-            const containers = Array.from(collage.querySelectorAll('.image-container'));
-            const shuffledContainers = shuffleArray(containers);
+            const folders = ['first', 'photos', 'charts', 'papers'];
             
             // Clear the collage
             collage.innerHTML = '';
             
-            // Add the shuffled containers back
-            shuffledContainers.forEach(container => {
-                collage.appendChild(container);
+            // For each folder, create a container with a random image
+            folders.forEach(folder => {
+                const imageContainer = document.createElement('div');
+                imageContainer.className = 'image-container';
+                
+                // Create a new image element
+                const img = document.createElement('img');
+                
+                // Set the image source based on the folder
+                if (folder === 'first') {
+                    img.src = 'images/first/alonzi-lu.jpg';
+                    img.alt = 'Professor Alonzi and student Isabella Lu';
+                } else if (folder === 'photos') {
+                    const photos = ['uvads-building-ext.jpg', 'uvads-cavman.jpg', 'uvads-building-int.jpg'];
+                    const randomPhoto = photos[Math.floor(Math.random() * photos.length)];
+                    img.src = `images/photos/${randomPhoto}`;
+                    img.alt = randomPhoto.replace(/-/g, ' ').replace('.jpg', '');
+                } else if (folder === 'charts') {
+                    const charts = ['hu-male-female.png', 'county-map.png'];
+                    const randomChart = charts[Math.floor(Math.random() * charts.length)];
+                    img.src = `images/charts/${randomChart}`;
+                    img.alt = randomChart.replace(/-/g, ' ').replace('.png', '');
+                } else if (folder === 'papers') {
+                    const papers = ['SIEDS-2025-ds.png', 'SIEDS-2025-sys.png'];
+                    const randomPaper = papers[Math.floor(Math.random() * papers.length)];
+                    img.src = `images/papers/${randomPaper}`;
+                    img.alt = randomPaper.replace(/-/g, ' ').replace('.png', '');
+                }
+                
+                imageContainer.appendChild(img);
+                collage.appendChild(imageContainer);
             });
         }
 
