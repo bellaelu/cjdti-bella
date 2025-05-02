@@ -190,6 +190,7 @@ footer {
 
     .image-container img {
         max-height: 300px;
+        height: auto;
     }
 
     .team-grid {
@@ -211,7 +212,7 @@ footer {
     main {
         padding: 0.5rem;
         margin-top: 100px;
-        padding-bottom: 250px; /* Reduced padding for small mobile */
+        padding-bottom: 200px; /* Reduced padding for small mobile */
     }
 
     .logo-text {
@@ -262,6 +263,7 @@ footer {
 
     .image-container img {
         max-height: 250px;
+        height: auto;
     }
 
     .team-grid {
@@ -304,7 +306,7 @@ footer {
 @media (max-height: 500px) and (orientation: landscape) {
     main {
         margin-top: 80px;
-        padding-bottom: 150px;
+        padding-bottom: 125px;
     }
 
     .logo-text {
