@@ -129,7 +129,7 @@ footer {
         padding: 1rem;
         min-height: calc(100vh - 8rem);
         margin-top: 120px;
-        padding-bottom: 250px; /* Increased padding for mobile */
+        padding-bottom: 350px; /* Increased padding for mobile */
     }
 
     section {
@@ -209,7 +209,7 @@ footer {
     main {
         padding: 0.5rem;
         margin-top: 100px;
-        padding-bottom: 300px; /* Further increased padding for small mobile */
+        padding-bottom: 400px; /* Further increased padding for small mobile */
     }
 
     .logo-text {
