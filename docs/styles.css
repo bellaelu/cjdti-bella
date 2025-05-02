@@ -3,6 +3,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    -webkit-tap-highlight-color: transparent; /* Remove tap highlight on mobile */
 }
 
 body {
@@ -76,6 +77,10 @@ h2 {
     font-size: 2rem;
     color: white;
     margin-bottom: 1rem;
+    text-decoration: underline;
+    text-decoration-color: #F9DCBF;
+    text-underline-offset: 0.5rem;
+    text-decoration-thickness: 0.15rem;
 }
 
 p {
@@ -88,7 +93,7 @@ footer {
     background-color: #232D4B;
     color: white;
     text-align: center;
-    padding: 2rem 0;
+    padding: 1rem 0;
     position: fixed;
     bottom: 0;
     left: 0;
@@ -123,6 +128,8 @@ footer {
     main {
         padding: 1rem;
         min-height: calc(100vh - 8rem);
+        margin-top: 120px;
+        padding-bottom: 250px; /* Increased padding for mobile */
     }
 
     section {
@@ -137,16 +144,60 @@ footer {
     h2 {
         font-size: 1.5rem;
         text-align: center;
+        text-underline-offset: 0.4rem;
+        text-decoration-thickness: 0.12rem;
     }
 
     p {
         text-align: center;
         font-size: 1rem;
         line-height: 1.4;
+        margin-bottom: 0.75rem;
     }
 
     .footer-logo {
         height: 80px;
+    }
+
+    .carousel-controls {
+        padding: 0 0.5rem;
+    }
+
+    .carousel-button {
+        padding: 0.75rem;
+        font-size: 1.25rem;
+        min-width: 40px;
+        min-height: 40px;
+    }
+
+    .image-collage {
+        grid-template-columns: 1fr;
+        gap: 0.5rem;
+    }
+
+    .image-container {
+        padding: 0.25rem;
+    }
+
+    .image-container img {
+        max-height: 300px;
+    }
+
+    .team-grid {
+        gap: 1.5rem;
+    }
+
+    .team-image-container {
+        width: 150px;
+        height: 150px;
+    }
+
+    #about p {
+        text-align: left;
+    }
+
+    footer {
+        padding: 0.75rem 0;
     }
 }
 
@@ -154,27 +205,105 @@ footer {
 @media (max-width: 480px) {
     main {
         padding: 0.5rem;
+        margin-top: 100px;
+        padding-bottom: 300px; /* Further increased padding for small mobile */
     }
 
     .logo-text {
-        font-size: 3rem;
+        font-size: 2.5rem;
         letter-spacing: 0.06em;
     }
 
     h2 {
         font-size: 1.25rem;
+        text-underline-offset: 0.3rem;
+        text-decoration-thickness: 0.1rem;
     }
 
     p {
         font-size: 0.9rem;
+        margin-bottom: 0.5rem;
     }
 
     .footer-logos {
         flex-direction: column;
+        gap: 1rem;
     }
 
     .footer-logo {
-        height: 70px;
+        height: 60px;
+    }
+
+    .carousel-slide {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+
+    .image-collage {
+        gap: 0.25rem;
+    }
+
+    .image-container {
+        padding: 0.15rem;
+    }
+
+    .image-container img {
+        max-height: 250px;
+    }
+
+    .team-grid {
+        gap: 1rem;
+    }
+
+    .team-image-container {
+        width: 120px;
+        height: 120px;
+        border-width: 4px;
+    }
+
+    .partner-logos {
+        gap: 1rem;
+    }
+
+    .partner-logo {
+        max-width: 150px;
+        max-height: 80px;
+    }
+
+    #about p {
+        text-align: left;
+    }
+
+    footer {
+        padding: 0.5rem 0;
+    }
+}
+
+/* Add touch-friendly styles */
+@media (hover: none) {
+    .image-container img:hover,
+    .partner-logo-container:hover {
+        transform: none;
+    }
+
+    .carousel-button {
+        background: rgba(35, 45, 75, 0.9);
+    }
+}
+
+/* Add landscape orientation support */
+@media (max-height: 500px) and (orientation: landscape) {
+    main {
+        margin-top: 80px;
+        padding-bottom: 150px;
+    }
+
+    .logo-text {
+        font-size: 2.5rem;
+    }
+
+    .team-grid {
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
     }
 }
 
@@ -193,7 +322,8 @@ footer {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #232D4B; /* UVA Blue background */
+    background-color: #232D4B;
+    padding: 0.5rem;
 }
 
 .image-container img {
@@ -206,12 +336,6 @@ footer {
 
 .image-container img:hover {
     transform: scale(1.05);
-}
-
-@media (max-width: 768px) {
-    .image-collage {
-        grid-template-columns: 1fr;
-    }
 }
 
 .carousel {
@@ -306,6 +430,10 @@ a:hover {
 
 #about li {
     margin-bottom: 1rem;
+}
+
+#about p {
+    text-align: left;
 }
 
 .partner-logos {
