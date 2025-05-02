@@ -129,7 +129,7 @@ footer {
         padding: 1rem;
         min-height: calc(100vh - 8rem);
         margin-top: 120px;
-        padding-bottom: 350px; /* Increased padding for mobile */
+        padding-bottom: 250px; /* Reduced padding for mobile */
     }
 
     section {
@@ -183,7 +183,8 @@ footer {
     }
 
     .image-container {
-        padding: 0.15rem;
+        padding: 0.1rem;
+        border: 2px solid #F9DCBF;
     }
 
     .image-container img {
@@ -209,7 +210,7 @@ footer {
     main {
         padding: 0.5rem;
         margin-top: 100px;
-        padding-bottom: 400px; /* Further increased padding for small mobile */
+        padding-bottom: 300px; /* Reduced padding for small mobile */
     }
 
     .logo-text {
@@ -253,7 +254,8 @@ footer {
     }
 
     .image-container {
-        padding: 0.1rem;
+        padding: 0.05rem;
+        border: 1px solid #F9DCBF;
     }
 
     .image-container img {
