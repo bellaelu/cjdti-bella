@@ -185,7 +185,7 @@ footer {
     .image-container {
         padding: 0.1rem;
         border: 2px solid #F9DCBF;
-        height: auto;
+        display: inline-block;
     }
 
     .image-container img {
@@ -257,7 +257,7 @@ footer {
     .image-container {
         padding: 0.05rem;
         border: 1px solid #F9DCBF;
-        height: auto;
+        display: inline-block;
     }
 
     .image-container img {
