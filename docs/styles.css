@@ -189,7 +189,6 @@ footer {
     }
 
     .image-container img {
-        max-height: 300px;
         height: auto;
     }
 
@@ -262,7 +261,6 @@ footer {
     }
 
     .image-container img {
-        max-height: 250px;
         height: auto;
     }
 
@@ -418,10 +416,7 @@ footer {
         flex-direction: column;
     }
     
-    .image-container {
-        padding-bottom: 100%;
-    }
-}
+ }
 
 a {
     color: #F9DCBF; /* UVA 25% orange */
