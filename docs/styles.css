@@ -144,6 +144,8 @@ footer {
     h2 {
         font-size: 1.5rem;
         text-align: center;
+        text-decoration: underline;
+        text-decoration-color: #F9DCBF;
         text-underline-offset: 0.4rem;
         text-decoration-thickness: 0.12rem;
     }
@@ -152,7 +154,12 @@ footer {
         text-align: center;
         font-size: 1rem;
         line-height: 1.4;
-        margin-bottom: 0.75rem;
+    }
+
+    #about p {
+        text-align: left;
+        font-size: 1rem;
+        line-height: 1.4;
     }
 
     .footer-logo {
@@ -172,11 +179,11 @@ footer {
 
     .image-collage {
         grid-template-columns: 1fr;
-        gap: 0.5rem;
+        gap: 0.25rem;
     }
 
     .image-container {
-        padding: 0.25rem;
+        padding: 0.15rem;
     }
 
     .image-container img {
@@ -190,10 +197,6 @@ footer {
     .team-image-container {
         width: 150px;
         height: 150px;
-    }
-
-    #about p {
-        text-align: left;
     }
 
     footer {
@@ -216,13 +219,19 @@ footer {
 
     h2 {
         font-size: 1.25rem;
+        text-decoration: underline;
+        text-decoration-color: #F9DCBF;
         text-underline-offset: 0.3rem;
         text-decoration-thickness: 0.1rem;
     }
 
     p {
         font-size: 0.9rem;
-        margin-bottom: 0.5rem;
+    }
+
+    #about p {
+        text-align: left;
+        font-size: 0.9rem;
     }
 
     .footer-logos {
@@ -240,11 +249,11 @@ footer {
     }
 
     .image-collage {
-        gap: 0.25rem;
+        gap: 0.15rem;
     }
 
     .image-container {
-        padding: 0.15rem;
+        padding: 0.1rem;
     }
 
     .image-container img {
@@ -268,10 +277,6 @@ footer {
     .partner-logo {
         max-width: 150px;
         max-height: 80px;
-    }
-
-    #about p {
-        text-align: left;
     }
 
     footer {
@@ -434,6 +439,8 @@ a:hover {
 
 #about p {
     text-align: left;
+    margin-bottom: 1rem;
+    color: white;
 }
 
 .partner-logos {
