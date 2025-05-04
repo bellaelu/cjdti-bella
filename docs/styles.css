@@ -31,7 +31,7 @@ main {
     max-width: 1200px;
     margin-left: auto;
     margin-right: auto;
-    padding-bottom: 200px; /* Increased padding to prevent footer overlap */
+    padding-bottom: 300px; /* Increased padding to prevent footer overlap */
 }
 
 section {
@@ -532,4 +532,47 @@ a:hover {
     color: white;
     font-size: 1.2rem;
     font-weight: bold;
+}
+
+/* Alumni Styles */
+.alumni-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin: 2rem 0;
+}
+
+.alumni-member {
+    text-align: center;
+    padding: 1rem;
+    background-color: transparent;
+}
+
+.alumni-image-container {
+    width: 100%;
+    margin-bottom: 1rem;
+    border: 4px solid #F9DCBF;
+    border-radius: 8px;
+    padding: 4px;
+    background-color: #F9DCBF;
+}
+
+.alumni-image {
+    width: 100%;
+    height: auto;
+    border-radius: 4px;
+    object-fit: cover;
+    display: block;
+}
+
+.alumni-name {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: white;
+    margin-bottom: 0.5rem;
+}
+
+.alumni-years {
+    color: white;
+    font-size: 0.9rem;
 } 

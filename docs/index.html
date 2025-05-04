@@ -18,30 +18,7 @@
     <main>
         <section id="home">
             <div class="image-collage">
-                <div class="image-container">
-                    <img src="images/first/alonzi-lu.jpg" alt="Professor Alonzi and student Isabella Lu">
-                </div>
-                <div class="image-container">
-                    <img src="images/photos/uvads-building-ext.jpg" alt="UVA Data Science Building Exterior">
-                </div>
-                <div class="image-container">
-                    <img src="images/photos/uvads-cavman.jpg" alt="UVA Cavalier Mascot">
-                </div>
-                <div class="image-container">
-                    <img src="images/photos/uvads-building-int.jpg" alt="UVA Data Science Building Interior">
-                </div>
-                <div class="image-container">
-                    <img src="images/charts/hu-male-female.png" alt="HU Male Female Distribution">
-                </div>
-                <div class="image-container">
-                    <img src="images/charts/county-map.png" alt="County Map">
-                </div>
-                <div class="image-container">
-                    <img src="images/papers/SIEDS-2025-ds.png" alt="SIEDS 2025 Data Science">
-                </div>
-                <div class="image-container">
-                    <img src="images/papers/SIEDS-2025-sys.png" alt="SIEDS 2025 Systems">
-                </div>
+                <!-- Placeholder, will populate with shuffled images -->
             </div>
         </section>
 
@@ -95,18 +72,34 @@
                         <img src="images/team/peter-alonzi.png" alt="Peter Alonzi" class="team-image">
                     </div>
                     <div class="team-name">Peter Alonzi</div>
+                    <div class="team-title">Director</div>
+                    <div class="team-github">@alonzi</div>
                 </div>
                 <div class="team-member">
                     <div class="team-image-container">
                         <img src="images/team/rachel-seo.png" alt="Rachel Seo" class="team-image">
                     </div>
                     <div class="team-name">Rachel Seo</div>
+                    <div class="team-title">Analyst</div>
+                    <div class="team-github"></div>
                 </div>
                 <div class="team-member">
                     <div class="team-image-container">
                         <img src="images/team/bella-lu.png" alt="Bella Lu" class="team-image">
                     </div>
                     <div class="team-name">Bella Lu</div>
+                    <div class="team-title">Analyst</div>
+                    <div class="team-github">@bellaelu</div>
+                </div>
+            </div>
+
+            <h2>Alumni</h2>
+            <div class="alumni-grid">
+                <div class="alumni-member">
+                    <div class="alumni-image-container">
+                        <img src="images/photos/SIEDS-2025-sys.jpeg" alt="2025 Systems Engineering Capstone Team" class="alumni-image">
+                    </div>
+                    <div class="alumni-name">2025 Systems Engineering Capstone Team</div>
                 </div>
             </div>
 
@@ -133,33 +126,47 @@
     </footer>
 
     <script>
+        // List of all available photos in the photos directory
+        const availablePhotos = [
+            'uvads-cavman.jpg',
+            'uvads-building-int.jpg',
+            'SIEDS-best-paper-cert.jpeg',
+            'trophy.jpg',
+            'uvads-building-ext.jpg',
+            'SIEDS-2025-sys.jpeg',
+            'SIEDS-2025-DS.jpg'
+        ];
+
+        // List of all available charts
+        const availableCharts = [
+            'hu-male-female.png',
+            'county-map.png',
+            'arrest-flowchart.png'
+        ];
+
         function shuffleImages() {
             const collage = document.querySelector('.image-collage');
-            const folders = ['first',  'charts', 'photos','papers'];
+            const folders = ['first', 'charts', 'photos', 'papers'];
             
             // Clear the collage
             collage.innerHTML = '';
             
             // For each folder, create a container with a random image
-            folders.forEach(folder => {
+            for (const folder of folders) {
                 const imageContainer = document.createElement('div');
                 imageContainer.className = 'image-container';
                 
-                // Create a new image element
                 const img = document.createElement('img');
                 
-                // Set the image source based on the folder
                 if (folder === 'first') {
                     img.src = 'images/first/alonzi-lu.jpg';
                     img.alt = 'Professor Alonzi and student Isabella Lu';
                 } else if (folder === 'photos') {
-                    const photos = ['uvads-building-ext.jpg', 'uvads-cavman.jpg', 'uvads-building-int.jpg'];
-                    const randomPhoto = photos[Math.floor(Math.random() * photos.length)];
+                    const randomPhoto = availablePhotos[Math.floor(Math.random() * availablePhotos.length)];
                     img.src = `images/photos/${randomPhoto}`;
-                    img.alt = randomPhoto.replace(/-/g, ' ').replace('.jpg', '');
+                    img.alt = randomPhoto.replace(/-/g, ' ').replace(/\.(jpg|jpeg|png)$/, '');
                 } else if (folder === 'charts') {
-                    const charts = ['hu-male-female.png', 'county-map.png'];
-                    const randomChart = charts[Math.floor(Math.random() * charts.length)];
+                    const randomChart = availableCharts[Math.floor(Math.random() * availableCharts.length)];
                     img.src = `images/charts/${randomChart}`;
                     img.alt = randomChart.replace(/-/g, ' ').replace('.png', '');
                 } else if (folder === 'papers') {
@@ -171,7 +178,7 @@
                 
                 imageContainer.appendChild(img);
                 collage.appendChild(imageContainer);
-            });
+            }
         }
 
         // Shuffle images when the page loads
