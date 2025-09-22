@@ -124,6 +124,18 @@ footer {
 }
 
 /* Responsive design */
+@media (max-width: 1024px) {
+    .partner-logos {
+        grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+        gap: 1.25rem;
+    }
+
+    .partner-list ul {
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 0.5rem 1.5rem;
+    }
+}
+
 @media (max-width: 768px) {
     main {
         padding: 1rem;
@@ -273,12 +285,22 @@ footer {
     }
 
     .partner-logos {
+        grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
         gap: 1rem;
     }
 
     .partner-logo {
-        max-width: 150px;
-        max-height: 80px;
+        max-width: 120px;
+        max-height: 70px;
+    }
+
+    .partner-list ul {
+        grid-template-columns: 1fr;
+        gap: 0.25rem;
+    }
+
+    .partner-list li {
+        font-size: 0.9rem;
     }
 
     footer {
@@ -444,26 +466,30 @@ a:hover {
 }
 
 .partner-logos {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 2rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 1.5rem;
     margin: 2rem 0;
+    max-width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .partner-logo-container {
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 0.5rem;
+    padding: 0.75rem;
     background-color: #F9DCBF;
-    border-radius: 5px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    transition: transform 0.2s ease;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    min-height: 80px;
 }
 
 .partner-logo-container:hover {
     transform: scale(1.05);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
 }
 
 .partner-logo {
@@ -475,18 +501,24 @@ a:hover {
 .partner-list {
     text-align: center;
     margin: 2rem 0;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .partner-list ul {
     list-style-type: none;
     padding: 0;
-    display: inline-block;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 0.5rem 2rem;
     text-align: left;
 }
 
 .partner-list li {
     margin-bottom: 0.5rem;
     color: white;
+    font-size: 0.95rem;
 }
 
 .team-grid {
