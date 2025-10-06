@@ -654,12 +654,16 @@ a:hover {
 }
 
 .donor-card {
-    flex: 0 0 300px;
+    flex: 0 0 280px;
     background-color: rgba(249, 220, 191, 0.08);
     border: 1px solid rgba(249, 220, 191, 0.3);
     border-radius: 8px;
     padding: 1rem;
     text-align: center;
+    min-height: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 .donor-logo-wrap {
@@ -698,16 +702,28 @@ a:hover {
 }
 
 @media (max-width: 1024px) {
-    .donor-card { flex-basis: 260px; }
+    .donor-card { 
+        flex-basis: 240px; 
+        min-height: 180px;
+    }
 }
 
 @media (max-width: 768px) {
     .donors-carousel { gap: 0.25rem; }
-    .donor-card { flex-basis: 220px; padding: 0.75rem; }
-    .donor-logo-wrap { height: 100px; }
+    .donor-card { 
+        flex-basis: 200px; 
+        padding: 0.75rem;
+        min-height: 160px;
+    }
+    .donor-logo-wrap { height: 90px; }
     .donors-button { padding: 0.5rem 0.75rem; font-size: 1.1rem; }
 }
 
 @media (max-width: 480px) {
-    .donor-card { flex-basis: 85%; margin: 0 auto; }
+    .donor-card { 
+        flex-basis: 85%; 
+        margin: 0 auto;
+        min-height: 140px;
+    }
+    .donor-logo-wrap { height: 80px; }
 }
