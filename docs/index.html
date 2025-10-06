@@ -97,6 +97,30 @@
                 </ul>
             </div>
 
+            <h2>Donors</h2>
+            <section id="donors" aria-label="Donor organizations">
+                <div class="donors-carousel">
+                    <button class="donors-button prev" aria-label="Previous donor">‹</button>
+                    <div class="donors-viewport">
+                        <div class="donors-track">
+                            <div class="donor-card">
+                                <div class="donor-logo-wrap">
+                                    <img src="images/logos/jt-logo.png" alt="Jefferson Trust logo" class="donor-logo">
+                                </div>
+                                <div class="donor-name">Jefferson Trust</div>
+                            </div>
+                            <div class="donor-card">
+                                <div class="donor-logo-wrap">
+                                    <img src="images/logos/uvads-logo.png" alt="University of Virginia School of Data Science logo" class="donor-logo">
+                                </div>
+                                <div class="donor-name">University of Virginia School of Data Science</div>
+                            </div>
+                        </div>
+                    </div>
+                    <button class="donors-button next" aria-label="Next donor">›</button>
+                </div>
+            </section>
+
             <h2>Our Team</h2>
             <div class="team-grid">
                 <div class="team-member">
@@ -215,6 +239,45 @@
 
         // Shuffle images when the page loads
         window.addEventListener('load', shuffleImages);
+
+        // Donors carousel logic
+        window.addEventListener('DOMContentLoaded', () => {
+            const track = document.querySelector('.donors-track');
+            const prevBtn = document.querySelector('.donors-button.prev');
+            const nextBtn = document.querySelector('.donors-button.next');
+            if (!track || !prevBtn || !nextBtn) return;
+
+            let index = 0;
+            const cards = Array.from(track.children);
+            const cardWidth = () => cards[0]?.getBoundingClientRect().width || 0;
+
+            function update() {
+                const offset = -index * (cardWidth() + 16); // 16px gap
+                track.style.transform = `translateX(${offset}px)`;
+                prevBtn.disabled = index === 0;
+                nextBtn.disabled = index >= Math.max(0, cards.length - visibleCount());
+            }
+
+            function visibleCount() {
+                const viewport = document.querySelector('.donors-viewport');
+                if (!viewport) return 1;
+                const width = viewport.getBoundingClientRect().width;
+                return Math.max(1, Math.floor((width + 16) / (cardWidth() + 16)));
+            }
+
+            prevBtn.addEventListener('click', () => {
+                index = Math.max(0, index - 1);
+                update();
+            });
+
+            nextBtn.addEventListener('click', () => {
+                index = Math.min(cards.length - visibleCount(), index + 1);
+                update();
+            });
+
+            window.addEventListener('resize', update);
+            update();
+        });
     </script>
 </body>
 </html>
