@@ -217,6 +217,20 @@ footer {
         height: 150px;
     }
 
+    .publications-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+
+    .publication-item {
+        padding: 1.25rem;
+    }
+
+    h3 {
+        font-size: 1.25rem;
+        text-align: center;
+    }
+
     footer {
         padding: 0.75rem 0;
     }
@@ -287,6 +301,19 @@ footer {
         width: 120px;
         height: 120px;
         border-width: 4px;
+    }
+
+    .publications-grid {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+
+    .publication-item {
+        padding: 1rem;
+    }
+
+    h3 {
+        font-size: 1.1rem;
     }
 
     .partner-logos {
@@ -583,6 +610,63 @@ a:hover {
     color: white;
     font-size: 1.2rem;
     font-weight: bold;
+}
+
+/* Publications Styles */
+h3 {
+    font-size: 1.5rem;
+    color: #F9DCBF;
+    margin: 2rem 0 1rem 0;
+    text-decoration: underline;
+    text-decoration-color: #F9DCBF;
+    text-underline-offset: 0.4rem;
+    text-decoration-thickness: 0.1rem;
+}
+
+.publications-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin: 2rem 0;
+}
+
+.publication-item {
+    background-color: rgba(249, 220, 191, 0.08);
+    border: 1px solid rgba(249, 220, 191, 0.3);
+    border-radius: 8px;
+    padding: 1.5rem;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.publication-item:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(249, 220, 191, 0.2);
+}
+
+.publication-item h4 {
+    color: #F9DCBF;
+    font-size: 1.2rem;
+    margin-bottom: 0.75rem;
+    font-weight: bold;
+}
+
+.publication-item p {
+    color: white;
+    margin-bottom: 1rem;
+    line-height: 1.5;
+}
+
+.publication-link {
+    color: #F9DCBF;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+    display: inline-block;
+}
+
+.publication-link:hover {
+    color: #E57200;
+    text-decoration: underline;
 }
 
 /* Alumni Styles */
