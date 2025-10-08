@@ -231,6 +231,19 @@ footer {
         text-align: center;
     }
 
+    .press-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+
+    .press-item {
+        padding: 1.25rem;
+    }
+
+    .press-title {
+        font-size: 1.1rem;
+    }
+
     footer {
         padding: 0.75rem 0;
     }
@@ -314,6 +327,25 @@ footer {
 
     h3 {
         font-size: 1.1rem;
+    }
+
+    .press-grid {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+
+    .press-item {
+        padding: 1rem;
+    }
+
+    .press-title {
+        font-size: 1rem;
+    }
+
+    .press-preview {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.5rem;
     }
 
     .partner-logos {
@@ -665,6 +697,78 @@ h3 {
 }
 
 .publication-link:hover {
+    color: #E57200;
+    text-decoration: underline;
+}
+
+/* Press Styles */
+.press-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    gap: 2rem;
+    margin: 2rem 0;
+}
+
+.press-item {
+    background-color: rgba(249, 220, 191, 0.08);
+    border: 1px solid rgba(249, 220, 191, 0.3);
+    border-radius: 8px;
+    padding: 1.5rem;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.press-item:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(249, 220, 191, 0.2);
+}
+
+.press-preview {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+    padding-bottom: 0.75rem;
+    border-bottom: 1px solid rgba(249, 220, 191, 0.3);
+}
+
+.press-source {
+    color: #F9DCBF;
+    font-weight: bold;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.press-date {
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 0.85rem;
+}
+
+.press-title {
+    color: white;
+    font-size: 1.3rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+    line-height: 1.4;
+}
+
+.press-excerpt {
+    color: rgba(255, 255, 255, 0.9);
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+    font-size: 0.95rem;
+}
+
+.press-link {
+    color: #F9DCBF;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+    display: inline-block;
+    font-size: 0.95rem;
+}
+
+.press-link:hover {
     color: #E57200;
     text-decoration: underline;
 }
