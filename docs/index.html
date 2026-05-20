@@ -15,227 +15,254 @@
         </div>
     </header>
 
+    <nav class="tab-nav" role="tablist" aria-label="Main navigation">
+        <button class="tab-button active" role="tab" aria-selected="true" aria-controls="tab-home" id="tab-btn-home" data-tab="home">Home</button>
+        <button class="tab-button" role="tab" aria-selected="false" aria-controls="tab-team" id="tab-btn-team" data-tab="team">The Team</button>
+        <button class="tab-button" role="tab" aria-selected="false" aria-controls="tab-contact" id="tab-btn-contact" data-tab="contact">Contact Us</button>
+    </nav>
+
     <main>
-        <section id="home">
-            <div class="image-collage">
-                <!-- Placeholder, will populate with shuffled images -->
-            </div>
-        </section>
-
-        <section id="about">
-            <h2>About Us</h2>
-            <p>The Criminal Justice Data Training Initiative (CJDTI) is a program that creates unique undergraduate research opportunities and a meaningful impact on the local community. Through hands-on experience with criminal justice data, students develop both technical skills and a contextual understanding of how data science can improve existing issues within the criminal justice system. The initiative works in collaboration with local agencies, including the Charlottesville Police Department and the Albemarle-Charlottesville Regional Jail, to analyze data and support the Evidence Based Decision Making team (EBDM).
- 
-            We are housed within the UVA School of Data Science and our start-up funding was generously provided by The Jefferson Trust.</p>
-            
-            <h2>Impact</h2>
-            <p> We are currently building our success to make a meaningful impact in the future. Our initial research projects include: 
-                - Court Fees for driver's licenses in the state of Virginia
-                - Therapeutic Docket 
-
-                After the creation of the CJDTI, we were able to expand our projects to include: 
-                - Jail bookings 
-                - Home Electronic Incarceration
-            
-            </p>
-            
-            <h2>Partner Organizations</h2>
-            <div class="partner-logos">
-                <div class="partner-logo-container">
-                    <img src="images/partners/CPD-seal.jpg" alt="Charlottesville Police Department Logo" class="partner-logo">
-                </div>
-                <div class="partner-logo-container">
-                    <img src="images/partners/acrj.png" alt="Albemarle-Charlottesville Regional Jail Logo" class="partner-logo">
-                </div>
-                <div class="partner-logo-container">
-                    <img src="images/partners/ebdm.png" alt="Evidence Based Decision Making Team Logo" class="partner-logo">
-                </div>
-                <div class="partner-logo-container">
-                    <img src="images/partners/oar.png" alt="Offender Aid and Restoration Logo" class="partner-logo">
-                </div>
-                <div class="partner-logo-container">
-                    <img src="images/partners/r10.png" alt="Region 10 Logo" class="partner-logo">
-                </div>
-                <div class="partner-logo-container">
-                    <img src="images/partners/cit.png" alt="Thomas Jefferson Area CIT Logo" class="partner-logo">
-                </div>
-                <div class="partner-logo-container">
-                    <img src="images/partners/cville-court.png" alt="City of Charlottesville Circuit Court Logo" class="partner-logo">
-                </div>
-                <div class="partner-logo-container">
-                    <img src="images/partners/acpd.png" alt="Albemarle County Police Department Logo" class="partner-logo">
-                </div>
-                <div class="partner-logo-container">
-                    <img src="images/partners/upd.png" alt="UVA Police Department Logo" class="partner-logo">
-                </div>
-                <div class="partner-logo-container">
-                    <img src="images/partners/cvrj.png" alt="Central Virginia Regional Jail Logo" class="partner-logo">
-                </div>
-                <div class="partner-logo-container">
-                    <img src="images/partners/ccjb.png" alt="Community Criminal Justice Board Logo" class="partner-logo">
-                </div>
-                <div class="partner-logo-container">
-                    <img src="images/partners/district-9.png" alt="District 9 Probation and Parole Office Logo" class="partner-logo">
-                </div>
-                
-            </div>
-
-            <div class="partner-list">
-                <ul>
-                    <li>Charlottesville Police Department (CPD)</li>
-                    <li>Albemarle-Charlottesville Regional Jail (ACRJ)</li>
-                    <li>Evidence Based Decision Making Team (EBDM)</li>
-                    <li>Offender Aid and Restoration (OAR)</li>
-                    <li>Region 10</li>
-                    <li>Thomas Jefferson Area CIT (TJACIT)</li>
-                    <li>City of Charlottesville Circuit Court</li>
-                    <li>Albemarle County Police Department (ACPD)</li>
-                    <li>UVA Police Department (UPD)</li>
-                    <li>Central Virginia Regional Jail (CVRJ)</li>
-                    <li>Community Criminal Justice Board (CCJB)</li>
-                    <li>District 9 Probation and Parole Office </li>
-                </ul>
-            </div>
-
-            <h2>Donors</h2>
-            <p>Our work is generously supported by...</p>
-            <section id="donors" aria-label="Donor organizations">
-                <div class="donors-carousel">
-                    <button class="donors-button prev" aria-label="Previous donor">‹</button>
-                    <div class="donors-viewport">
-                        <div class="donors-track">
-                            <div class="donor-card">
-                                <div class="donor-logo-wrap">
-                                    <img src="images/logos/jt-logo.png" alt="Jefferson Trust logo" class="donor-logo">
-                                </div>
-                                <div class="donor-name">Jefferson Trust</div>
-                            </div>
-                            <div class="donor-card">
-                                <div class="donor-logo-wrap">
-                                    <img src="images/logos/uvads-logo.png" alt="University of Virginia School of Data Science logo" class="donor-logo">
-                                </div>
-                                <div class="donor-name">University of Virginia School of Data Science</div>
-                            </div>
-                            <div class="donor-card">
-                                <div class="donor-logo-wrap">
-                                    <img src="images/logos/uvaengineering-logo1.png" alt="University of Virginia Engineering logo" class="donor-logo">
-                                </div>
-                                <div class="donor-name">University of Virginia Engineering</div>
-                            </div>
-                            <div class="donor-card">
-                                <div class="donor-logo-wrap">
-                                    <img src="images/logos/oar-logo.png" alt="Offender Aid and Restoration logo" class="donor-logo">
-                                </div>
-                                <div class="donor-name">Offender Aid and Restoration</div>
-                            </div>
-                            <div class="donor-card">
-                                <div class="donor-logo-wrap">
-                                    <img src="images/logos/CESL-logo1.png" alt="Community Engagement Service Learning logo" class="donor-logo">
-                                </div>
-                                <div class="donor-name">Community Engagement Service Learning</div>
-                            </div>
-                        </div>
-                    </div>
-                    <button class="donors-button next" aria-label="Next donor">›</button>
+        <div class="tab-panel active" id="tab-home" role="tabpanel" aria-labelledby="tab-btn-home">
+            <section id="home">
+                <div class="image-collage">
+                    <!-- Placeholder, will populate with shuffled images -->
                 </div>
             </section>
 
-            <h2>Our Team</h2>
-            <div class="team-grid">
-                <div class="team-member">
-                    <div class="team-image-container">
-                        <img src="images/team/peter-alonzi.png" alt="Peter Alonzi" class="team-image">
-                    </div>
-                    <div class="team-name">Peter Alonzi</div>
-                    <div class="team-title">Director</div>
-                    <div class="team-github">@alonzi</div>
-                </div>
-                <div class="team-member">
-                    <div class="team-image-container">
-                        <img src="images/team/michael-smith.jpg" alt="Michael Smith" class="team-image">
-                    </div>
-                    <div class="team-name">Michael Smith</div>
-                    <div class="team-title">Fellow</div>
-                </div>
-                <div class="team-member">
-                    <div class="team-image-container">
-                        <img src="images/team/preston-white.JPG" alt="Preston White" class="team-image">
-                    </div>
-                    <div class="team-name">Preston White</div>
-                    <div class="team-title">Fellow</div>
-                </div>
-                <div class="team-member">
-                    <div class="team-image-container">
-                        <img src="images/team/jonas_headshot.png" alt="Jonas Lee" class="team-image">
-                    </div>
-                    <div class="team-name">Jonas Lee</div>
-                    <div class="team-title">Analyst</div>
-                    <div class="team-github">@jonaslee17</div>
-                </div>
-                <div class="team-member">
-                    <div class="team-image-container">
-                        <img src="images/team/bella-lu.png" alt="Bella Lu" class="team-image">
-                    </div>
-                    <div class="team-name">Bella Lu</div>
-                    <div class="team-title">Analyst</div>
-                    <div class="team-github">@bellaelu</div>
-                </div>
-                <div class="team-member">
-                    <div class="team-image-container">
-                        <img src="images/team/rachel-seo.png" alt="Rachel Seo" class="team-image">
-                    </div>
-                    <div class="team-name">Rachel Seo</div>
-                    <div class="team-title">Analyst</div>
-                    <div class="team-github">@rachelsseo</div>
-                </div>
-            </div>
+            <section class="content-section">
+                <h2>About Us</h2>
+                <p>The Criminal Justice Data Training Initiative (CJDTI) is a program that creates unique undergraduate research opportunities and a meaningful impact on the local community. Through hands-on experience with criminal justice data, students develop both technical skills and a contextual understanding of how data science can improve existing issues within the criminal justice system. The initiative works in collaboration with local agencies, including the Charlottesville Police Department and the Albemarle-Charlottesville Regional Jail, to analyze data and support the Evidence Based Decision Making team (EBDM).
+ 
+                We are housed within the UVA School of Data Science and our start-up funding was generously provided by The Jefferson Trust.</p>
+            </section>
 
-            <h2>Publications</h2>
+            <section class="content-section" id="impact">
+                <h2>Impact</h2>
+                <p class="impact-text"> We are currently building our success to make a meaningful impact in the future. Our initial research projects include: 
+                    - Court Fees for driver's licenses in the state of Virginia
+                    - Therapeutic Docket 
 
-            <h3>2025 SIEDS Papers</h3>
+                    After the creation of the CJDTI, we were able to expand our projects to include: 
+                    - Jail bookings 
+                    - Home Electronic Incarceration
+                
+                </p>
+            </section>
 
-            <p>The Systems and Information Engineering Design Symposium (SIEDS) is a student-focused international forum for applied research, development, and design in Systems and Information Engineering.</p>
-            
-            <div class="publications-grid">
-                <div class="publication-item">
-                    <h4>Optimizing Local Police Practices with a Data Visualization Dashboard</h4>
-                    <p>Our data science research paper presented at SIEDS 2025, showcasing dashboards that promote innovative approaches to criminal justice data analysis.</p>
-                    <a href="https://ieeexplore.ieee.org/document/11021141" class="publication-link" target="_blank" rel="noopener noreferrer">View Paper →</a>
-                </div>
-                <div class="publication-item">
-                    <h4>High Utilizers of the Albemarle and Charlottesville Criminal Justice System</h4>
-                    <p>Our systems engineering research paper presented at SIEDS 2025, highlighting potential interventions to reduce recidivism amongst high utilizers of the criminal justice system.</p>
-                    <a href="https://ieeexplore.ieee.org/document/11021179" class="publication-link" target="_blank" rel="noopener noreferrer">View Paper →</a>
-                </div>
-            </div>
-
-            <h2>Alumni</h2>
-            <div class="alumni-grid">
-                <div class="alumni-member">
-                    <div class="alumni-image-container">
-                        <img src="images/photos/SIEDS-2025-sys.jpeg" alt="2025 Systems Engineering Capstone Team" class="alumni-image">
+            <section class="content-section">
+                <h2>Partner Organizations</h2>
+                <div class="partner-logos">
+                    <div class="partner-logo-container">
+                        <img src="images/partners/CPD-seal.jpg" alt="Charlottesville Police Department Logo" class="partner-logo">
                     </div>
-                    <div class="alumni-name">2025 Systems Engineering Capstone Team</div>
-                </div>
-            </div>
-
-            <h2>Press</h2>
-            <div class="press-grid">
-                <div class="press-item">
-                    <h3 class="press-title">Peter Alonzi Receives $78K Jefferson Trust Award to Launch Criminal Justice Data Training Initiative</h3>
-                    <div class="press-preview">
-                        <div class="press-source">UVA School of Data Science</div>
-                        <div class="press-date">February 6, 2025</div>
+                    <div class="partner-logo-container">
+                        <img src="images/partners/acrj.png" alt="Albemarle-Charlottesville Regional Jail Logo" class="partner-logo">
                     </div>
-                    <p class="press-excerpt">Professor Peter Alonzi has been awarded a $78,000 grant from The Jefferson Trust to establish the Criminal Justice Data Training Initiative (CJDTI), a program that will create unique undergraduate research opportunities while making a meaningful impact on the local community.</p>
-                    <a href="https://datascience.virginia.edu/news/peter-alonzi-receives-jefferson-trust-award-launch-criminal-justice-data-training-initiative" class="press-link" target="_blank" rel="noopener noreferrer">Read Full Article →</a>
+                    <div class="partner-logo-container">
+                        <img src="images/partners/ebdm.png" alt="Evidence Based Decision Making Team Logo" class="partner-logo">
+                    </div>
+                    <div class="partner-logo-container">
+                        <img src="images/partners/oar.png" alt="Offender Aid and Restoration Logo" class="partner-logo">
+                    </div>
+                    <div class="partner-logo-container">
+                        <img src="images/partners/r10.png" alt="Region 10 Logo" class="partner-logo">
+                    </div>
+                    <div class="partner-logo-container">
+                        <img src="images/partners/cit.png" alt="Thomas Jefferson Area CIT Logo" class="partner-logo">
+                    </div>
+                    <div class="partner-logo-container">
+                        <img src="images/partners/cville-court.png" alt="City of Charlottesville Circuit Court Logo" class="partner-logo">
+                    </div>
+                    <div class="partner-logo-container">
+                        <img src="images/partners/acpd.png" alt="Albemarle County Police Department Logo" class="partner-logo">
+                    </div>
+                    <div class="partner-logo-container">
+                        <img src="images/partners/upd.png" alt="UVA Police Department Logo" class="partner-logo">
+                    </div>
+                    <div class="partner-logo-container">
+                        <img src="images/partners/cvrj.png" alt="Central Virginia Regional Jail Logo" class="partner-logo">
+                    </div>
+                    <div class="partner-logo-container">
+                        <img src="images/partners/ccjb.png" alt="Community Criminal Justice Board Logo" class="partner-logo">
+                    </div>
+                    <div class="partner-logo-container">
+                        <img src="images/partners/district-9.png" alt="District 9 Probation and Parole Office Logo" class="partner-logo">
+                    </div>
                 </div>
-            </div>
 
-            <h2>Contact Us</h2>
-            <p>Our code lives on <a href="https://github.com/alonzi/cjdti">github</a>.</p>
-            <p>If you are interested in joining the CJDTI please email <a href="mailto:datascientist@virginia.edu">Professor Alonzi</a>.</p>
-        </section>
+                <div class="partner-list">
+                    <ul>
+                        <li>Charlottesville Police Department (CPD)</li>
+                        <li>Albemarle-Charlottesville Regional Jail (ACRJ)</li>
+                        <li>Evidence Based Decision Making Team (EBDM)</li>
+                        <li>Offender Aid and Restoration (OAR)</li>
+                        <li>Region 10</li>
+                        <li>Thomas Jefferson Area CIT (TJACIT)</li>
+                        <li>City of Charlottesville Circuit Court</li>
+                        <li>Albemarle County Police Department (ACPD)</li>
+                        <li>UVA Police Department (UPD)</li>
+                        <li>Central Virginia Regional Jail (CVRJ)</li>
+                        <li>Community Criminal Justice Board (CCJB)</li>
+                        <li>District 9 Probation and Parole Office </li>
+                    </ul>
+                </div>
+            </section>
+
+            <section class="content-section">
+                <h2>Donors</h2>
+                <p>Our work is generously supported by...</p>
+                <div id="donors" aria-label="Donor organizations">
+                    <div class="donors-carousel">
+                        <button class="donors-button prev" aria-label="Previous donor">‹</button>
+                        <div class="donors-viewport">
+                            <div class="donors-track">
+                                <div class="donor-card">
+                                    <div class="donor-logo-wrap">
+                                        <img src="images/logos/jt-logo.png" alt="Jefferson Trust logo" class="donor-logo">
+                                    </div>
+                                    <div class="donor-name">Jefferson Trust</div>
+                                </div>
+                                <div class="donor-card">
+                                    <div class="donor-logo-wrap">
+                                        <img src="images/logos/uvads-logo.png" alt="University of Virginia School of Data Science logo" class="donor-logo">
+                                    </div>
+                                    <div class="donor-name">University of Virginia School of Data Science</div>
+                                </div>
+                                <div class="donor-card">
+                                    <div class="donor-logo-wrap">
+                                        <img src="images/logos/uvaengineering-logo1.png" alt="University of Virginia Engineering logo" class="donor-logo">
+                                    </div>
+                                    <div class="donor-name">University of Virginia Engineering</div>
+                                </div>
+                                <div class="donor-card">
+                                    <div class="donor-logo-wrap">
+                                        <img src="images/logos/oar-logo.png" alt="Offender Aid and Restoration logo" class="donor-logo">
+                                    </div>
+                                    <div class="donor-name">Offender Aid and Restoration</div>
+                                </div>
+                                <div class="donor-card">
+                                    <div class="donor-logo-wrap">
+                                        <img src="images/logos/CESL-logo1.png" alt="Community Engagement Service Learning logo" class="donor-logo">
+                                    </div>
+                                    <div class="donor-name">Community Engagement Service Learning</div>
+                                </div>
+                            </div>
+                        </div>
+                        <button class="donors-button next" aria-label="Next donor">›</button>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <div class="tab-panel" id="tab-team" role="tabpanel" aria-labelledby="tab-btn-team" hidden>
+            <section class="content-section">
+                <h2>Our Team</h2>
+                <div class="team-grid">
+                    <div class="team-member">
+                        <div class="team-image-container">
+                            <img src="images/team/peter-alonzi.png" alt="Peter Alonzi" class="team-image">
+                        </div>
+                        <div class="team-name">Peter Alonzi</div>
+                        <div class="team-title">Director</div>
+                        <div class="team-github">@alonzi</div>
+                    </div>
+                    <div class="team-member">
+                        <div class="team-image-container">
+                            <img src="images/team/michael-smith.jpg" alt="Michael Smith" class="team-image">
+                        </div>
+                        <div class="team-name">Michael Smith</div>
+                        <div class="team-title">Fellow</div>
+                    </div>
+                    <div class="team-member">
+                        <div class="team-image-container">
+                            <img src="images/team/preston-white.JPG" alt="Preston White" class="team-image">
+                        </div>
+                        <div class="team-name">Preston White</div>
+                        <div class="team-title">Fellow</div>
+                    </div>
+                    <div class="team-member">
+                        <div class="team-image-container">
+                            <img src="images/team/jonas_headshot.png" alt="Jonas Lee" class="team-image">
+                        </div>
+                        <div class="team-name">Jonas Lee</div>
+                        <div class="team-title">Analyst</div>
+                        <div class="team-github">@jonaslee17</div>
+                    </div>
+                    <div class="team-member">
+                        <div class="team-image-container">
+                            <img src="images/team/bella-lu.png" alt="Bella Lu" class="team-image">
+                        </div>
+                        <div class="team-name">Bella Lu</div>
+                        <div class="team-title">Analyst</div>
+                        <div class="team-github">@bellaelu</div>
+                    </div>
+                    <div class="team-member">
+                        <div class="team-image-container">
+                            <img src="images/team/rachel-seo.png" alt="Rachel Seo" class="team-image">
+                        </div>
+                        <div class="team-name">Rachel Seo</div>
+                        <div class="team-title">Analyst</div>
+                        <div class="team-github">@rachelsseo</div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="content-section">
+                <h2>Publications</h2>
+
+                <h3>2025 SIEDS Papers</h3>
+
+                <p>The Systems and Information Engineering Design Symposium (SIEDS) is a student-focused international forum for applied research, development, and design in Systems and Information Engineering.</p>
+                
+                <div class="publications-grid">
+                    <div class="publication-item">
+                        <h4>Optimizing Local Police Practices with a Data Visualization Dashboard</h4>
+                        <p>Our data science research paper presented at SIEDS 2025, showcasing dashboards that promote innovative approaches to criminal justice data analysis.</p>
+                        <a href="https://ieeexplore.ieee.org/document/11021141" class="publication-link" target="_blank" rel="noopener noreferrer">View Paper →</a>
+                    </div>
+                    <div class="publication-item">
+                        <h4>High Utilizers of the Albemarle and Charlottesville Criminal Justice System</h4>
+                        <p>Our systems engineering research paper presented at SIEDS 2025, highlighting potential interventions to reduce recidivism amongst high utilizers of the criminal justice system.</p>
+                        <a href="https://ieeexplore.ieee.org/document/11021179" class="publication-link" target="_blank" rel="noopener noreferrer">View Paper →</a>
+                    </div>
+                </div>
+            </section>
+
+            <section class="content-section">
+                <h2>Alumni</h2>
+                <div class="alumni-grid">
+                    <div class="alumni-member">
+                        <div class="alumni-image-container">
+                            <img src="images/photos/SIEDS-2025-sys.jpeg" alt="2025 Systems Engineering Capstone Team" class="alumni-image">
+                        </div>
+                        <div class="alumni-name">2025 Systems Engineering Capstone Team</div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="content-section">
+                <h2>Press</h2>
+                <div class="press-grid">
+                    <div class="press-item">
+                        <h3 class="press-title">Peter Alonzi Receives $78K Jefferson Trust Award to Launch Criminal Justice Data Training Initiative</h3>
+                        <div class="press-preview">
+                            <div class="press-source">UVA School of Data Science</div>
+                            <div class="press-date">February 6, 2025</div>
+                        </div>
+                        <p class="press-excerpt">Professor Peter Alonzi has been awarded a $78,000 grant from The Jefferson Trust to establish the Criminal Justice Data Training Initiative (CJDTI), a program that will create unique undergraduate research opportunities while making a meaningful impact on the local community.</p>
+                        <a href="https://datascience.virginia.edu/news/peter-alonzi-receives-jefferson-trust-award-launch-criminal-justice-data-training-initiative" class="press-link" target="_blank" rel="noopener noreferrer">Read Full Article →</a>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <div class="tab-panel" id="tab-contact" role="tabpanel" aria-labelledby="tab-btn-contact" hidden>
+            <section class="content-section">
+                <h2>Contact Us</h2>
+                <p>Our code lives on <a href="https://github.com/alonzi/cjdti">github</a>.</p>
+                <p>If you are interested in joining the CJDTI please email <a href="mailto:datascientist@virginia.edu">Professor Alonzi</a>.</p>
+            </section>
+        </div>
     </main>
 
     <footer>
@@ -250,6 +277,30 @@
     </footer>
 
     <script>
+        // Tab navigation
+        const tabButtons = document.querySelectorAll('.tab-button');
+        const tabPanels = document.querySelectorAll('.tab-panel');
+
+        function switchTab(tabId) {
+            tabButtons.forEach(btn => {
+                const isActive = btn.dataset.tab === tabId;
+                btn.classList.toggle('active', isActive);
+                btn.setAttribute('aria-selected', isActive);
+            });
+
+            tabPanels.forEach(panel => {
+                const isActive = panel.id === `tab-${tabId}`;
+                panel.classList.toggle('active', isActive);
+                panel.hidden = !isActive;
+            });
+
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+
+        tabButtons.forEach(btn => {
+            btn.addEventListener('click', () => switchTab(btn.dataset.tab));
+        });
+
         // List of all available photos in the photos directory
         const availablePhotos = [
             'uvads-cavman.jpg',
