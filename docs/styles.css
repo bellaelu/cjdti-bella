@@ -1102,6 +1102,17 @@ h3 {
     letter-spacing: 0.05em;
 }
 
+.founded-by-link {
+    display: block;
+    text-decoration: none;
+    transition: opacity 0.2s ease, transform 0.2s ease;
+}
+
+.founded-by-link:hover {
+    opacity: 0.9;
+    transform: scale(1.03);
+}
+
 .founded-by-logo {
     max-width: 340px;
     max-height: 200px;
@@ -1142,17 +1153,34 @@ h3 {
     transition: transform 0.4s ease-in-out;
 }
 
-.donor-card {
+.donor-card-link,
+.donors-track > .donor-card {
     flex: 0 0 280px;
+}
+
+.donor-card-link {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+}
+
+.donor-card-link:hover .donor-card {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(249, 220, 191, 0.2);
+}
+
+.donor-card {
     background-color: rgba(249, 220, 191, 0.08);
     border: 1px solid rgba(249, 220, 191, 0.3);
     border-radius: 8px;
     padding: 1rem;
     text-align: center;
     min-height: 200px;
+    height: 100%;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
 .donor-logo-wrap {
@@ -1191,16 +1219,24 @@ h3 {
 }
 
 @media (max-width: 1024px) {
-    .donor-card { 
+    .donor-card-link,
+    .donors-track > .donor-card { 
         flex-basis: 240px; 
+    }
+
+    .donor-card {
         min-height: 180px;
     }
 }
 
 @media (max-width: 768px) {
     .donors-carousel { gap: 0.25rem; }
-    .donor-card { 
+    .donor-card-link,
+    .donors-track > .donor-card { 
         flex-basis: 200px; 
+    }
+
+    .donor-card {
         padding: 0.75rem;
         min-height: 160px;
     }
@@ -1209,9 +1245,13 @@ h3 {
 }
 
 @media (max-width: 480px) {
-    .donor-card { 
+    .donor-card-link,
+    .donors-track > .donor-card { 
         flex-basis: 85%; 
         margin: 0 auto;
+    }
+
+    .donor-card {
         min-height: 140px;
     }
     .donor-logo-wrap { height: 80px; }
