@@ -26,7 +26,7 @@ header {
 /* Tab navigation */
 .tab-nav {
     position: fixed;
-    top: 76px;
+    top: 96px;
     left: 0;
     width: 100%;
     display: flex;
@@ -84,7 +84,7 @@ header {
 /* Main content styles */
 main {
     padding: 2rem;
-    margin-top: 128px;
+    margin-top: 152px;
     min-height: calc(100vh - 300px);
     width: 100%;
     padding-bottom: 300px; /* Increased padding to prevent footer overlap */
@@ -117,7 +117,7 @@ section,
 }
 
 .header-logo {
-    height: 60px;
+    height: 85px;
     width: auto;
     display: block;
     object-fit: contain;
@@ -125,14 +125,14 @@ section,
 
 .vertical-bar {
     width: 3px;
-    height: 48px;
+    height: 68px;
     background-color: #F9DCBF;
     margin: 0 0.65rem;
 }
 
 .full-name {
     font-family: 'Times New Roman', serif;
-    font-size: 1.05rem;
+    font-size: 1.15rem;
     line-height: 1.25;
     color: #F9DCBF;
     margin-bottom: 0;
@@ -211,12 +211,12 @@ footer {
     main {
         padding: 1rem;
         min-height: calc(100vh - 8rem);
-        margin-top: 118px;
+        margin-top: 142px;
         padding-bottom: 200px; /* Reduced padding for mobile */
     }
 
     .tab-nav {
-        top: 70px;
+        top: 88px;
         gap: 0.25rem;
         padding: 0.5rem;
     }
@@ -233,16 +233,16 @@ footer {
     }
 
     .header-logo {
-        height: 52px;
+        height: 72px;
     }
 
     .full-name {
-        font-size: 0.95rem;
+        font-size: 1rem;
         max-width: 220px;
     }
 
     .vertical-bar {
-        height: 42px;
+        height: 58px;
     }
 
     h2 {
@@ -340,12 +340,12 @@ footer {
 @media (max-width: 480px) {
     main {
         padding: 0.5rem;
-        margin-top: 108px;
+        margin-top: 128px;
         padding-bottom: 200px; /* Reduced padding for small mobile */
     }
 
     .tab-nav {
-        top: 64px;
+        top: 80px;
         flex-wrap: wrap;
     }
 
@@ -356,16 +356,16 @@ footer {
     }
 
     .header-logo {
-        height: 44px;
+        height: 58px;
     }
 
     .full-name {
-        font-size: 0.85rem;
+        font-size: 0.9rem;
         max-width: 180px;
     }
 
     .vertical-bar {
-        height: 36px;
+        height: 46px;
         margin: 0 0.5rem;
     }
 
@@ -499,17 +499,17 @@ footer {
 /* Add landscape orientation support */
 @media (max-height: 500px) and (orientation: landscape) {
     main {
-        margin-top: 100px;
+        margin-top: 118px;
         padding-bottom: 125px;
     }
 
     .tab-nav {
-        top: 58px;
+        top: 72px;
         padding: 0.35rem;
     }
 
     .header-logo {
-        height: 40px;
+        height: 52px;
     }
 
     .full-name {
@@ -815,6 +815,31 @@ h3 {
 .publication-link:hover {
     color: #E57200;
     text-decoration: underline;
+}
+
+.poster-item {
+    max-width: 100%;
+}
+
+.poster-embed {
+    width: 100%;
+    height: 600px;
+    border: none;
+    border-radius: 4px;
+    background-color: #ffffff;
+    margin-bottom: 1rem;
+}
+
+@media (max-width: 768px) {
+    .poster-embed {
+        height: 450px;
+    }
+}
+
+@media (max-width: 480px) {
+    .poster-embed {
+        height: 350px;
+    }
 }
 
 /* Press Styles */
