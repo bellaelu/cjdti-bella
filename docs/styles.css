@@ -1085,8 +1085,40 @@ h3 {
 } 
 
 /* Donors section */
+.founded-by {
+    text-align: center;
+    margin: 1.5rem auto 2.5rem;
+    padding: 1.5rem 1rem;
+    max-width: 400px;
+}
+
+.founded-by-label {
+    font-family: 'Times New Roman', serif;
+    font-size: 1.25rem;
+    color: #F9DCBF;
+    font-style: italic;
+    margin-bottom: 1rem;
+    letter-spacing: 0.05em;
+}
+
+.founded-by-logo {
+    max-width: 220px;
+    max-height: 120px;
+    width: auto;
+    height: auto;
+    object-fit: contain;
+    display: block;
+    margin: 0 auto;
+}
+
+.donors-support-text {
+    text-align: center;
+    margin-bottom: 1.5rem;
+    color: white;
+}
+
 #donors {
-    margin: 2rem 0 3rem;
+    margin: 0 0 3rem;
 }
 
 .donors-carousel {
