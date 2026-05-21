@@ -6,6 +6,13 @@
     -webkit-tap-highlight-color: transparent; /* Remove tap highlight on mobile */
 }
 
+:root {
+    --header-logo-height: 95px;
+    --header-padding: 0.35rem;
+    --header-height: calc(var(--header-padding) * 2 + var(--header-logo-height));
+    --tab-nav-height: 3.25rem;
+}
+
 body {
     font-family: 'Arial', sans-serif;
     line-height: 1.6;
@@ -19,14 +26,14 @@ header {
     left: 0;
     width: 100%;
     background-color: #232D4B;
-    padding: 0.25rem 0;
+    padding: var(--header-padding) 0;
     z-index: 1000;
 }
 
 /* Tab navigation */
 .tab-nav {
     position: fixed;
-    top: 96px;
+    top: var(--header-height);
     left: 0;
     width: 100%;
     display: flex;
@@ -84,7 +91,7 @@ header {
 /* Main content styles */
 main {
     padding: 2rem;
-    margin-top: 152px;
+    margin-top: calc(var(--header-height) + var(--tab-nav-height));
     min-height: calc(100vh - 300px);
     width: 100%;
     padding-bottom: 300px; /* Increased padding to prevent footer overlap */
@@ -117,7 +124,7 @@ section,
 }
 
 .header-logo {
-    height: 85px;
+    height: var(--header-logo-height);
     width: auto;
     display: block;
     object-fit: contain;
@@ -125,14 +132,14 @@ section,
 
 .vertical-bar {
     width: 3px;
-    height: 68px;
+    height: 76px;
     background-color: #F9DCBF;
     margin: 0 0.65rem;
 }
 
 .full-name {
     font-family: 'Times New Roman', serif;
-    font-size: 1.15rem;
+    font-size: 1.2rem;
     line-height: 1.25;
     color: #F9DCBF;
     margin-bottom: 0;
@@ -211,12 +218,13 @@ footer {
     main {
         padding: 1rem;
         min-height: calc(100vh - 8rem);
-        margin-top: 142px;
+        --header-logo-height: 80px;
+        margin-top: calc(var(--header-height) + var(--tab-nav-height));
         padding-bottom: 200px; /* Reduced padding for mobile */
     }
 
     .tab-nav {
-        top: 88px;
+        top: var(--header-height);
         gap: 0.25rem;
         padding: 0.5rem;
     }
@@ -232,17 +240,13 @@ footer {
         padding: 1rem 0;
     }
 
-    .header-logo {
-        height: 72px;
-    }
-
     .full-name {
         font-size: 1rem;
         max-width: 220px;
     }
 
     .vertical-bar {
-        height: 58px;
+        height: 64px;
     }
 
     h2 {
@@ -340,12 +344,13 @@ footer {
 @media (max-width: 480px) {
     main {
         padding: 0.5rem;
-        margin-top: 128px;
+        --header-logo-height: 65px;
+        margin-top: calc(var(--header-height) + var(--tab-nav-height));
         padding-bottom: 200px; /* Reduced padding for small mobile */
     }
 
     .tab-nav {
-        top: 80px;
+        top: var(--header-height);
         flex-wrap: wrap;
     }
 
@@ -355,17 +360,13 @@ footer {
         border-width: 2px;
     }
 
-    .header-logo {
-        height: 58px;
-    }
-
     .full-name {
         font-size: 0.9rem;
         max-width: 180px;
     }
 
     .vertical-bar {
-        height: 46px;
+        height: 52px;
         margin: 0 0.5rem;
     }
 
@@ -487,7 +488,8 @@ footer {
 /* Add touch-friendly styles */
 @media (hover: none) {
     .image-container img:hover,
-    .partner-logo-container:hover {
+    .partner-logo-container:hover,
+    .partner-logo-link:hover .partner-logo-container {
         transform: none;
     }
 
@@ -499,17 +501,14 @@ footer {
 /* Add landscape orientation support */
 @media (max-height: 500px) and (orientation: landscape) {
     main {
-        margin-top: 118px;
+        --header-logo-height: 58px;
+        margin-top: calc(var(--header-height) + var(--tab-nav-height));
         padding-bottom: 125px;
     }
 
     .tab-nav {
-        top: 72px;
+        top: var(--header-height);
         padding: 0.35rem;
-    }
-
-    .header-logo {
-        height: 52px;
     }
 
     .full-name {
@@ -681,7 +680,14 @@ a:hover {
     min-height: 80px;
 }
 
-.partner-logo-container:hover {
+.partner-logo-link {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+}
+
+.partner-logo-container:hover,
+.partner-logo-link:hover .partner-logo-container {
     transform: scale(1.05);
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
 }
@@ -713,6 +719,17 @@ a:hover {
     margin-bottom: 0.5rem;
     color: white;
     font-size: 0.95rem;
+}
+
+.partner-list a {
+    color: #F9DCBF;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.partner-list a:hover {
+    color: #E57200;
+    text-decoration: underline;
 }
 
 .team-grid {
