@@ -1082,13 +1082,24 @@ h3 {
 }
 
 .alumni-member-capstone {
-    max-width: 600px;
+    width: 100%;
+    max-width: 100%;
 }
 
 .alumni-image-link {
     display: block;
+    max-width: 600px;
+    margin: 0 auto 1rem;
     text-decoration: none;
     transition: opacity 0.2s ease, transform 0.2s ease;
+}
+
+.alumni-capstone-details {
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+    padding: 0 1rem;
 }
 
 .alumni-image-link:hover {
@@ -1096,18 +1107,24 @@ h3 {
     transform: scale(1.01);
 }
 
+.alumni-capstone-details .alumni-name {
+    margin-bottom: 0.35rem;
+}
+
 .alumni-award {
     color: #F9DCBF;
     font-size: 1rem;
-    margin: 0.35rem 0 0.75rem;
+    margin: 0.35rem auto 0.75rem;
     line-height: 1.4;
+    max-width: 100%;
 }
 
 .alumni-roster {
-    margin: 0;
+    margin: 0 auto;
     color: white;
     font-size: 1rem;
     line-height: 1.5;
+    max-width: 100%;
 }
 
 .team-title,
