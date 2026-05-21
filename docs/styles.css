@@ -1054,9 +1054,10 @@ h3 {
 .alumni-grid {
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: stretch;
     gap: 2.5rem;
     margin: 2rem 0;
+    width: 100%;
 }
 
 .alumni-member {
@@ -1068,6 +1069,7 @@ h3 {
 
 .alumni-member-profile {
     max-width: 520px;
+    align-self: center;
 }
 
 .alumni-profile-layout {
@@ -1081,28 +1083,30 @@ h3 {
     margin-bottom: 0.35rem;
 }
 
-.alumni-member-capstone {
-    width: 100%;
-    max-width: 100%;
-}
-
-.alumni-image-link {
+.alumni-capstone-photo {
     display: block;
     max-width: 600px;
-    margin: 0 auto 1rem;
+    width: 100%;
+    margin: 0 auto;
+    align-self: center;
     text-decoration: none;
     transition: opacity 0.2s ease, transform 0.2s ease;
 }
 
 .alumni-capstone-details {
     width: 100%;
-    max-width: 800px;
-    margin: 0 auto;
     text-align: center;
-    padding: 0 1rem;
+    margin: 0 auto;
+    padding: 0;
 }
 
-.alumni-image-link:hover {
+.alumni-capstone-details .alumni-name,
+.alumni-capstone-details .alumni-award,
+.alumni-capstone-details .alumni-roster {
+    text-align: center;
+}
+
+.alumni-capstone-photo:hover {
     opacity: 0.92;
     transform: scale(1.01);
 }
