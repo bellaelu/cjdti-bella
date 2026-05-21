@@ -10,7 +10,7 @@ body {
     font-family: 'Arial', sans-serif;
     line-height: 1.6;
     color: #333;
-    background-color: #232D4B; /* UVA Blue */
+    background-color: #4d6088; /* Matches ombre gradient bottom */
 }
 
 header {
@@ -26,7 +26,7 @@ header {
 /* Tab navigation */
 .tab-nav {
     position: fixed;
-    top: 88px;
+    top: 118px;
     left: 0;
     width: 100%;
     display: flex;
@@ -84,12 +84,18 @@ header {
 /* Main content styles */
 main {
     padding: 2rem;
-    margin-top: 190px;
+    margin-top: 220px;
     min-height: calc(100vh - 300px);
-    max-width: 1200px;
-    margin-left: auto;
-    margin-right: auto;
+    width: 100%;
     padding-bottom: 300px; /* Increased padding to prevent footer overlap */
+    background: linear-gradient(
+        180deg,
+        #141b33 0%,
+        #1a2340 20%,
+        #232D4B 50%,
+        #354366 80%,
+        #4d6088 100%
+    );
 }
 
 section,
@@ -110,7 +116,7 @@ section,
 }
 
 .header-logo {
-    height: 72px;
+    height: 110px;
     width: auto;
     display: block;
     object-fit: contain;
@@ -118,7 +124,7 @@ section,
 
 .vertical-bar {
     width: 4px;
-    height: 60px;
+    height: 90px;
     background-color: #F9DCBF;
     margin: 0 1rem;
 }
@@ -202,12 +208,12 @@ footer {
     main {
         padding: 1rem;
         min-height: calc(100vh - 8rem);
-        margin-top: 155px;
+        margin-top: 175px;
         padding-bottom: 200px; /* Reduced padding for mobile */
     }
 
     .tab-nav {
-        top: 75px;
+        top: 95px;
         gap: 0.25rem;
         padding: 0.5rem;
     }
@@ -224,7 +230,7 @@ footer {
     }
 
     .header-logo {
-        height: 56px;
+        height: 85px;
     }
 
     h2 {
@@ -322,12 +328,12 @@ footer {
 @media (max-width: 480px) {
     main {
         padding: 0.5rem;
-        margin-top: 130px;
+        margin-top: 150px;
         padding-bottom: 200px; /* Reduced padding for small mobile */
     }
 
     .tab-nav {
-        top: 65px;
+        top: 80px;
         flex-wrap: wrap;
     }
 
@@ -338,7 +344,7 @@ footer {
     }
 
     .header-logo {
-        height: 44px;
+        height: 68px;
     }
 
     h2 {
@@ -481,7 +487,7 @@ footer {
     }
 
     .header-logo {
-        height: 40px;
+        height: 60px;
     }
 
     .team-grid {
@@ -504,7 +510,7 @@ footer {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #232D4B;
+    background-color: transparent;
     padding: 0.5rem;
     height: auto;
 }
