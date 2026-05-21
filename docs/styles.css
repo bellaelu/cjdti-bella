@@ -859,6 +859,116 @@ h3 {
     }
 }
 
+/* CJDTI Interest Form (Contact tab) */
+.interest-form-section {
+    max-width: 900px;
+    margin: 0 auto 3rem;
+    padding: 0 1rem 2rem;
+}
+
+.interest-form-card {
+    position: relative;
+    background: linear-gradient(145deg, rgba(229, 114, 0, 0.18) 0%, rgba(249, 220, 191, 0.12) 50%, rgba(35, 45, 75, 0.4) 100%);
+    border: 2px solid #E57200;
+    border-radius: 12px;
+    padding: 2rem 2rem 1.5rem;
+    box-shadow:
+        0 8px 32px rgba(0, 0, 0, 0.35),
+        0 0 0 1px rgba(249, 220, 191, 0.2),
+        inset 0 1px 0 rgba(255, 255, 255, 0.08);
+    transform: translateY(-4px);
+}
+
+.interest-form-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: linear-gradient(90deg, #E57200, #F9DCBF, #E57200);
+    border-radius: 12px 12px 0 0;
+}
+
+.interest-form-badge {
+    display: inline-block;
+    background-color: #E57200;
+    color: #ffffff;
+    font-size: 0.8rem;
+    font-weight: bold;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    padding: 0.35rem 0.85rem;
+    border-radius: 999px;
+    margin-bottom: 1rem;
+}
+
+.interest-form-card h3 {
+    color: #F9DCBF;
+    font-size: 1.75rem;
+    margin: 0 0 0.75rem 0;
+    text-decoration: none;
+}
+
+.interest-form-intro {
+    color: rgba(255, 255, 255, 0.95);
+    margin-bottom: 1.5rem;
+    line-height: 1.5;
+    font-size: 1.05rem;
+}
+
+.interest-form-embed {
+    width: 100%;
+    height: 520px;
+    border: none;
+    border-radius: 8px;
+    background-color: #ffffff;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
+}
+
+.interest-form-link {
+    display: inline-block;
+    margin-top: 1rem;
+    color: #F9DCBF;
+    font-weight: bold;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.interest-form-link:hover {
+    color: #E57200;
+    text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+    .interest-form-card {
+        padding: 1.5rem 1.25rem 1.25rem;
+    }
+
+    .interest-form-embed {
+        height: 480px;
+    }
+}
+
+@media (max-width: 480px) {
+    .interest-form-section {
+        padding: 0 0.5rem 1.5rem;
+    }
+
+    .interest-form-card {
+        padding: 1.25rem 1rem 1rem;
+        transform: none;
+    }
+
+    .interest-form-card h3 {
+        font-size: 1.4rem;
+    }
+
+    .interest-form-embed {
+        height: 420px;
+    }
+}
+
 /* Press Styles */
 .press-grid {
     display: grid;
