@@ -1043,9 +1043,10 @@ h3 {
 
 /* Alumni Styles */
 .alumni-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2.5rem;
     margin: 2rem 0;
 }
 
@@ -1053,6 +1054,35 @@ h3 {
     text-align: center;
     padding: 1rem;
     background-color: transparent;
+    width: 100%;
+}
+
+.alumni-member-profile {
+    max-width: 280px;
+}
+
+.alumni-member-capstone {
+    max-width: 600px;
+}
+
+.alumni-roster {
+    list-style: none;
+    padding: 0;
+    margin: 0.75rem 0 0;
+    color: white;
+    font-size: 1rem;
+    line-height: 1.8;
+}
+
+.team-title,
+.team-github {
+    color: white;
+    font-size: 1rem;
+}
+
+.team-github {
+    color: #F9DCBF;
+    margin-top: 0.25rem;
 }
 
 .alumni-image-container {
