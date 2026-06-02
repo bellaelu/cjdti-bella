@@ -621,7 +621,7 @@ body > footer {
 
 .hero-quote-attribution {
     font-family: var(--font-body);
-    font-size: 1.05rem;
+    font-size: .70rem;
     font-style: normal;
     font-weight: 600;
     color: var(--uva-orange-25);
