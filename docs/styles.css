@@ -168,7 +168,7 @@ p {
 }
 
 /* Footer styles */
-footer {
+body > footer {
     background-color: var(--uva-blue);
     color: white;
     text-align: center;
@@ -629,6 +629,7 @@ footer {
     text-align: center;
     display: block;
     width: 100%;
+    margin: 0;
 }
 
 .carousel {
