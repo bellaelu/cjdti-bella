@@ -593,6 +593,41 @@ footer {
     border-color: rgba(229, 114, 0, 0.55);
 }
 
+/* Hero quote */
+.hero-quote {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 1.5rem 1rem 2.5rem;
+    text-align: center;
+}
+
+.hero-quote-text {
+    font-family: 'Playfair Display', serif;
+    color: var(--uva-orange-25);
+    border: none;
+    margin: 0;
+    quotes: none;
+}
+
+.hero-quote-text p {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(1.45rem, 2.5vw, 2.15rem);
+    line-height: 1.55;
+    font-weight: 400;
+    font-style: italic;
+    margin-bottom: 1.25rem;
+    color: var(--uva-orange-25);
+}
+
+.hero-quote-attribution {
+    font-family: var(--font-body);
+    font-size: 1.05rem;
+    font-style: normal;
+    font-weight: 600;
+    color: var(--uva-orange-25);
+    letter-spacing: 0.02em;
+}
+
 .carousel {
     position: relative;
     max-width: 1200px;
