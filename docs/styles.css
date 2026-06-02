@@ -15,6 +15,7 @@
     --uva-blue-25: #C8CBD2;
     --uva-orange: #E57200;
     --uva-orange-25: #F9DCBF;
+    --font-body: 'Open Sans', sans-serif;
 }
 
 body {
@@ -94,6 +95,7 @@ header {
 
 /* Main content styles */
 main {
+    font-family: var(--font-body);
     padding: 2rem;
     margin-top: calc(var(--header-height) + var(--tab-nav-height));
     min-height: calc(100vh - 300px);
@@ -1184,7 +1186,6 @@ h3 {
 }
 
 .founded-by-label {
-    font-family: 'Times New Roman', serif;
     font-size: 1.25rem;
     color: #F9DCBF;
     font-style: italic;
