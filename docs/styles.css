@@ -32,7 +32,6 @@ header {
     background-color: var(--uva-orange-25);
     padding: var(--header-padding) 0;
     z-index: 1000;
-    border-bottom: 2px solid var(--uva-orange);
 }
 
 /* Tab navigation */
@@ -133,9 +132,6 @@ section,
     width: auto;
     display: block;
     object-fit: contain;
-    background-color: var(--uva-blue-25);
-    padding: 0.35rem 0.5rem;
-    border-radius: 6px;
 }
 
 .vertical-bar {
@@ -171,8 +167,8 @@ p {
 
 /* Footer styles */
 footer {
-    background-color: var(--uva-orange);
-    color: var(--uva-blue);
+    background-color: var(--uva-blue);
+    color: white;
     text-align: center;
     padding: 1rem 0;
     position: fixed;
@@ -183,7 +179,6 @@ footer {
     justify-content: center;
     align-items: center;
     z-index: 1000;
-    border-top: 2px solid var(--uva-blue);
 }
 
 .footer-logos {
@@ -191,8 +186,6 @@ footer {
     align-items: center;
     width: 100%;
     max-width: 1200px;
-    gap: 1.5rem;
-    padding: 0 1rem;
 }
 
 .footer-logo-container {
@@ -200,10 +193,6 @@ footer {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: var(--uva-blue);
-    border-radius: 8px;
-    padding: 0.75rem 1.25rem;
-    min-height: 100px;
 }
 
 .footer-logo {
