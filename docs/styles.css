@@ -46,19 +46,19 @@ header {
     align-items: center;
     gap: 0.5rem;
     padding: 0.45rem 1rem;
-    background-color: var(--uva-blue);
+    background-color: var(--uva-blue-25);
     z-index: 1001;
-    border-bottom: 2px solid var(--uva-orange-25);
-    box-shadow: 0 4px 12px rgba(35, 45, 75, 0.35);
+    border-bottom: 2px solid var(--uva-blue);
+    box-shadow: 0 4px 12px rgba(35, 45, 75, 0.15);
 }
 
 .tab-button {
     font-family: 'Arial', sans-serif;
     font-size: 0.95rem;
     font-weight: 600;
-    color: var(--uva-orange-25);
+    color: var(--uva-blue);
     background-color: transparent;
-    border: 2px solid var(--uva-orange-25);
+    border: 2px solid var(--uva-blue);
     border-radius: 6px;
     padding: 0.4rem 1.1rem;
     cursor: pointer;
@@ -68,7 +68,7 @@ header {
 .tab-button:hover {
     color: var(--uva-blue);
     background-color: var(--uva-orange-25);
-    border-color: var(--uva-orange-25);
+    border-color: var(--uva-orange);
 }
 
 .tab-button.active {
@@ -76,7 +76,7 @@ header {
     background-color: var(--uva-orange);
     border-color: var(--uva-orange);
     font-weight: bold;
-    box-shadow: 0 2px 8px rgba(35, 45, 75, 0.3);
+    box-shadow: 0 2px 8px rgba(35, 45, 75, 0.2);
 }
 
 .tab-button.active:hover {
@@ -626,6 +626,9 @@ footer {
     font-weight: 600;
     color: var(--uva-orange-25);
     letter-spacing: 0.02em;
+    text-align: center;
+    display: block;
+    width: 100%;
 }
 
 .carousel {
@@ -826,6 +829,11 @@ a:hover {
 .team-image[alt="Bella Lu"] {
     transform: scale(1.8);
     object-position: center 50%;
+}
+
+.team-image[alt="Jonas Lee"] {
+    transform: scale(1.75);
+    object-position: center 18%;
 }
 
 .team-name {
