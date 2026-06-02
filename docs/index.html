@@ -373,7 +373,7 @@
             btn.addEventListener('click', () => switchTab(btn.dataset.tab));
         });
 
-        // List of all available photos in the photos directory
+        // Hero collage: fixed top-left, random rotation for other slots
         const availablePhotos = [
             'uvads-cavman.jpg',
             'uvads-building-int.jpg',
@@ -384,48 +384,93 @@
             'SIEDS-2025-DS.jpg'
         ];
 
-        // List of all available charts
-        const availableCharts = [
-            'hu-male-female.png',
-            'county-map.png',
-            'arrest-flowchart.png'
+        const availablePapers = [
+            'SIEDS-2025-ds.png',
+            'SIEDS-2025-sys.png',
+            'SIEDS-2026-ds.png'
         ];
+
+        const availableCharts = [
+            'action-taken-violin-plot.png',
+            'action-taken.png',
+            'arrest-flowchart.png',
+            'booking-timeline-flowchart.png',
+            'county-map.png',
+            'daily-census.png',
+            'dashboard-1.png',
+            'dashboard-2.png',
+            'difference-residuals-distribution.png',
+            'difference-residuals.png',
+            'gender-HU-table.png',
+            'gender-arrest-pie-chart.png',
+            'high-utilizers-pie-chart.png',
+            'hu-male-female.png',
+            'jail-utilization-bed-forecast.png',
+            'jail-utilization-forecast-table.png',
+            'jurisdiction-adp-forecasts.png',
+            'misdemeanor-flowchart.png',
+            'reason-for-stop.png',
+            'statue-occurrences-chart.png',
+            'traffic-stops-census-data-comparison.png'
+        ];
+
+        const collageSlots = [
+            {
+                slot: 'first',
+                folder: 'first',
+                filename: 'alonzi-lu.jpg',
+                alt: 'Professor Alonzi and student Isabella Lu',
+                type: 'photo'
+            },
+            {
+                slot: 'photos',
+                folder: 'photos',
+                files: availablePhotos,
+                type: 'photo'
+            },
+            {
+                slot: 'papers',
+                folder: 'papers',
+                files: availablePapers,
+                type: 'paper'
+            },
+            {
+                slot: 'charts',
+                folder: 'charts',
+                files: availableCharts,
+                type: 'chart'
+            }
+        ];
+
+        function pickRandom(files) {
+            return files[Math.floor(Math.random() * files.length)];
+        }
+
+        function formatAltText(filename) {
+            return filename
+                .replace(/[-_]/g, ' ')
+                .replace(/\.(jpg|jpeg|png|heic|webp)$/i, '');
+        }
 
         function shuffleImages() {
             const collage = document.querySelector('.image-collage');
-            const folders = ['first', 'charts', 'photos', 'papers'];
-            
-            // Clear the collage
+            if (!collage) return;
+
             collage.innerHTML = '';
-            
-            // For each folder, create a container with a random image
-            for (const folder of folders) {
-                const imageContainer = document.createElement('div');
-                imageContainer.className = 'image-container';
-                
+
+            collageSlots.forEach(({ slot, folder, filename, files, alt, type }) => {
+                const chosenFile = filename || pickRandom(files);
+                const container = document.createElement('div');
+                container.className = `image-container image-${type} image-slot-${slot}`;
+
                 const img = document.createElement('img');
-                
-                if (folder === 'first') {
-                    img.src = 'images/first/alonzi-lu.jpg';
-                    img.alt = 'Professor Alonzi and student Isabella Lu';
-                } else if (folder === 'photos') {
-                    const randomPhoto = availablePhotos[Math.floor(Math.random() * availablePhotos.length)];
-                    img.src = `images/photos/${randomPhoto}`;
-                    img.alt = randomPhoto.replace(/-/g, ' ').replace(/\.(jpg|jpeg|png)$/, '');
-                } else if (folder === 'charts') {
-                    const randomChart = availableCharts[Math.floor(Math.random() * availableCharts.length)];
-                    img.src = `images/charts/${randomChart}`;
-                    img.alt = randomChart.replace(/-/g, ' ').replace('.png', '');
-                } else if (folder === 'papers') {
-                    const papers = ['SIEDS-2025-ds.png', 'SIEDS-2025-sys.png'];
-                    const randomPaper = papers[Math.floor(Math.random() * papers.length)];
-                    img.src = `images/papers/${randomPaper}`;
-                    img.alt = randomPaper.replace(/-/g, ' ').replace('.png', '');
-                }
-                
-                imageContainer.appendChild(img);
-                collage.appendChild(imageContainer);
-            }
+                img.src = `images/${folder}/${chosenFile}`;
+                img.alt = alt || formatAltText(chosenFile);
+                img.loading = 'lazy';
+
+                container.appendChild(img);
+                collage.appendChild(container);
+            });
         }
 
         // Shuffle images when the page loads
