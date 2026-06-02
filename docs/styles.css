@@ -792,6 +792,39 @@ a:hover {
     text-decoration: underline;
 }
 
+.classes-list {
+    list-style: none;
+    padding: 0;
+    margin: 1.5rem 0 2rem;
+}
+
+.classes-list li {
+    margin-bottom: 1rem;
+    padding: 1rem 1.25rem;
+    background-color: rgba(249, 220, 191, 0.08);
+    border: 1px solid rgba(249, 220, 191, 0.3);
+    border-radius: 8px;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.classes-list li:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(249, 220, 191, 0.2);
+}
+
+.classes-list a {
+    color: #F9DCBF;
+    text-decoration: none;
+    font-size: 1.1rem;
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+.classes-list a:hover {
+    color: #E57200;
+    text-decoration: underline;
+}
+
 .team-grid {
     display: flex;
     flex-wrap: wrap;
