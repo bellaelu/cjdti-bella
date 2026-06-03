@@ -1,0 +1,44 @@
+{
+  "photos": [
+    "2026-03-12-cvrj-board-meeting.heic",
+    "SIEDS-2025-DS.jpg",
+    "SIEDS-2025-sys.jpeg",
+    "SIEDS-2026-DS.png",
+    "SIEDS-best-paper-cert.jpeg",
+    "cjdti-cvrj-group-photo.jpeg",
+    "cjdti-cvrj-poster-group-photo.jpeg",
+    "trophy.jpg",
+    "uvads-building-ext.jpg",
+    "uvads-building-int.jpg",
+    "uvads-cavman.jpg"
+  ],
+  "papers": [
+    "SIEDS-2025-ds.png",
+    "SIEDS-2025-sys.png",
+    "SIEDS-2026-ds.png"
+  ],
+  "charts": [
+    "2026-03-12-cvrj-projection.png",
+    "action-taken-violin-plot.png",
+    "action-taken.png",
+    "arrest-flowchart.png",
+    "booking-timeline-flowchart.png",
+    "county-map.png",
+    "daily-census.png",
+    "dashboard-1.png",
+    "dashboard-2.png",
+    "difference-residuals-distribution.png",
+    "difference-residuals.png",
+    "gender-HU-table.png",
+    "gender-arrest-pie-chart.png",
+    "high-utilizers-pie-chart.png",
+    "hu-male-female.png",
+    "jail-utilization-bed-forecast.png",
+    "jail-utilization-forecast-table.png",
+    "jurisdiction-adp-forecasts.png",
+    "misdemeanor-flowchart.png",
+    "reason-for-stop.png",
+    "statue-occurrences-chart.png",
+    "traffic-stops-census-data-comparison.png"
+  ]
+}
