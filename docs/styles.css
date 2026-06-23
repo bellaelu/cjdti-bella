@@ -856,14 +856,35 @@ a:hover {
     object-position: center 20%;
 }
 
-.team-image[alt="Bella Lu"] {
-    transform: scale(1.8);
-    object-position: 50%, 50%;
+/* Team headshot framing — adjust scale and object-position per person */
+.team-image[alt="Peter Alonzi"] {
+    transform: scale(1.1);
+    object-position: center 28%;
+}
+
+.team-image[alt="Michael Smith"] {
+    transform: scale(1.2);
+    object-position: center 22%;
+}
+
+.team-image[alt="Preston White"] {
+    transform: scale(1.1);
+    object-position: center 25%;
 }
 
 .team-image[alt="Jonas Lee"] {
     transform: scale(1.75);
     object-position: center 18%;
+}
+
+.team-image[alt="Rachel Seo"] {
+    transform: scale(1.15);
+    object-position: center 18%;
+}
+
+.team-image[alt="Bella Lu"] {
+    transform: scale(1.8);
+    object-position: center 50%;
 }
 
 .team-name {
