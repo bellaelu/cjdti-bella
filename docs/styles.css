@@ -147,7 +147,7 @@ section,
     line-height: 1.25;
     color: var(--uva-blue);
     margin-bottom: 0;
-    max-width: 280px;
+    white-space: nowrap;
 }
 
 h2 {
@@ -245,7 +245,6 @@ body > footer {
 
     .full-name {
         font-size: 1rem;
-        max-width: 220px;
     }
 
     .vertical-bar {
@@ -369,8 +368,7 @@ body > footer {
     }
 
     .full-name {
-        font-size: 0.9rem;
-        max-width: 180px;
+        font-size: 0.85rem;
     }
 
     .vertical-bar {
@@ -858,13 +856,13 @@ a:hover {
 
 /* Team headshot framing — adjust scale and object-position per person */
 .team-image[alt="Peter Alonzi"] {
-    transform: scale(1.2);
-    object-position: center 15%;
+    transform: scale(1.6);
+    object-position: center 12%;
 }
 
 .team-image[alt="Michael Smith"] {
     transform: scale(1.15);
-    object-position: center 18%;
+    object-position: 55% 14%;
 }
 
 .team-image[alt="Preston White"] {
@@ -873,13 +871,13 @@ a:hover {
 }
 
 .team-image[alt="Jonas Lee"] {
-    transform: scale(1.5);
-    object-position: center 12%;
+    transform: scale(1.9);
+    object-position: center 2%;
 }
 
 .team-image[alt="Rachel Seo"] {
-    transform: scale(1.2);
-    object-position: center 12%;
+    transform: scale(1.15);
+    object-position: center 14%;
 }
 
 .team-image[alt="Bella Lu"] {
