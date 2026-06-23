@@ -858,7 +858,7 @@ a:hover {
 
 .team-image[alt="Bella Lu"] {
     transform: scale(1.8);
-    object-position: 50%, 70%;
+    object-position: 50%, 50%;
 }
 
 .team-image[alt="Jonas Lee"] {
