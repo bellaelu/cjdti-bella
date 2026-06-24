@@ -284,19 +284,36 @@
                 <h3>SIEDS Papers</h3>
 
                 <p>The Systems and Information Engineering Design Symposium (SIEDS) is a student-focused international forum for applied research, development, and design in Systems and Information Engineering.</p>
-                
-                <div class="publications-grid">
-                    <div class="publication-item">
-                        <h4>Optimizing Local Police Practices with a Data Visualization Dashboard</h4>
-                        <p>Our data science research paper presented at SIEDS 2025, showcasing dashboards that promote innovative approaches to criminal justice data analysis.</p>
-                        <a href="https://ieeexplore.ieee.org/document/11021141" class="publication-link" target="_blank" rel="noopener noreferrer">View Paper →</a>
+
+                <div class="sieds-carousel" aria-label="SIEDS Papers">
+                    <button class="sieds-button prev" aria-label="Previous paper">‹</button>
+                    <div class="sieds-viewport">
+                        <div class="sieds-track">
+                            <div class="publication-item sieds-slide">
+                                <h4>Forecasting Jail Bed Utilization for Central Virginia Regional Jail </h4>
+                                <p>Our data science research paper presented at SIEDS 2026, showcasing a forecasting model to support the Central Virginia Regional Jail's decision making.</p>
+                                <a href="https://edas.info/showManuscript.php?m=1571254585&ext=pdf&random=1976110522&type=stamped" class="publication-link" target="_blank" rel="noopener noreferrer">View Paper →</a>
+                            </div>
+                            <div class="publication-item sieds-slide">
+                                <h4>Socioeconomic Drivers of Adult Disproportionate Minority Contact </h4>
+                                <p>Our data science research paper presented at SIEDS 2025, showcasing dashboards that promote innovative approaches to criminal justice data analysis.</p>
+                                <a href="https://edas.info/showManuscript.php?m=1571253988&ext=pdf&random=2091285678&type=stamped" class="publication-link" target="_blank" rel="noopener noreferrer">View Paper →</a>
+                            </div>
+                            <div class="publication-item sieds-slide">
+                                <h4>Optimizing Local Police Practices with a Data Visualization Dashboard</h4>
+                                <p>Our data science research paper presented at SIEDS 2025, showcasing dashboards that promote innovative approaches to criminal justice data analysis.</p>
+                                <a href="https://ieeexplore.ieee.org/document/11021141" class="publication-link" target="_blank" rel="noopener noreferrer">View Paper →</a>
+                            </div>
+                            <div class="publication-item sieds-slide">
+                                <h4>High Utilizers of the Albemarle and Charlottesville Criminal Justice System</h4>
+                                <p>Our systems engineering research paper presented at SIEDS 2025, highlighting potential interventions to reduce recidivism amongst high utilizers of the criminal justice system.</p>
+                                <a href="https://ieeexplore.ieee.org/document/11021179" class="publication-link" target="_blank" rel="noopener noreferrer">View Paper →</a>
+                            </div>
+                        </div>
                     </div>
-                    <div class="publication-item">
-                        <h4>High Utilizers of the Albemarle and Charlottesville Criminal Justice System</h4>
-                        <p>Our systems engineering research paper presented at SIEDS 2025, highlighting potential interventions to reduce recidivism amongst high utilizers of the criminal justice system.</p>
-                        <a href="https://ieeexplore.ieee.org/document/11021179" class="publication-link" target="_blank" rel="noopener noreferrer">View Paper →</a>
-                    </div>
+                    <button class="sieds-button next" aria-label="Next paper">›</button>
                 </div>
+                <p class="sieds-counter" aria-live="polite">1 / 4</p>
 
                 <h3>Undergraduate Symposium Posters</h3>
 
@@ -523,6 +540,42 @@
 
             nextBtn.addEventListener('click', () => {
                 index = Math.min(cards.length - visibleCount(), index + 1);
+                update();
+            });
+
+            window.addEventListener('resize', update);
+            update();
+        });
+
+        // SIEDS papers carousel logic
+        window.addEventListener('DOMContentLoaded', () => {
+            const track = document.querySelector('.sieds-track');
+            const viewport = document.querySelector('.sieds-viewport');
+            const prevBtn = document.querySelector('.sieds-button.prev');
+            const nextBtn = document.querySelector('.sieds-button.next');
+            const counter = document.querySelector('.sieds-counter');
+            if (!track || !viewport || !prevBtn || !nextBtn) return;
+
+            let index = 0;
+            const slides = Array.from(track.children);
+
+            function update() {
+                const offset = -index * viewport.getBoundingClientRect().width;
+                track.style.transform = `translateX(${offset}px)`;
+                prevBtn.disabled = index === 0;
+                nextBtn.disabled = index >= slides.length - 1;
+                if (counter) {
+                    counter.textContent = `${index + 1} / ${slides.length}`;
+                }
+            }
+
+            prevBtn.addEventListener('click', () => {
+                index = Math.max(0, index - 1);
+                update();
+            });
+
+            nextBtn.addEventListener('click', () => {
+                index = Math.min(slides.length - 1, index + 1);
                 update();
             });
 

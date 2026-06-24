@@ -977,6 +977,87 @@ h3 {
     margin: 2rem 0;
 }
 
+.sieds-carousel {
+    position: relative;
+    max-width: 100%;
+    margin: 2rem 0 0.75rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.sieds-viewport {
+    overflow: hidden;
+    flex: 1;
+    min-width: 0;
+}
+
+.sieds-track {
+    display: flex;
+    transition: transform 0.4s ease-in-out;
+}
+
+.sieds-carousel .publication-item {
+    flex: 0 0 100%;
+    min-height: 260px;
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+}
+
+.sieds-carousel .publication-item p {
+    flex: 1;
+}
+
+.sieds-carousel .publication-link {
+    margin-top: auto;
+}
+
+.sieds-button {
+    background: rgba(35, 45, 75, 0.8);
+    color: #F9DCBF;
+    border: none;
+    padding: 0.75rem 1rem;
+    cursor: pointer;
+    font-size: 1.25rem;
+    border-radius: 999px;
+    transition: background 0.2s ease, opacity 0.2s ease;
+    flex-shrink: 0;
+}
+
+.sieds-button:hover:not(:disabled) {
+    background: rgba(35, 45, 75, 1);
+}
+
+.sieds-button:disabled {
+    opacity: 0.35;
+    cursor: not-allowed;
+}
+
+.sieds-counter {
+    text-align: center;
+    color: #F9DCBF;
+    font-size: 0.95rem;
+    margin: 0 0 2rem;
+}
+
+@media (max-width: 768px) {
+    .sieds-carousel .publication-item {
+        min-height: 300px;
+    }
+
+    .sieds-button {
+        padding: 0.5rem 0.75rem;
+        font-size: 1.1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .sieds-carousel .publication-item {
+        min-height: 340px;
+    }
+}
+
 .publication-item {
     background-color: rgba(249, 220, 191, 0.08);
     border: 1px solid rgba(249, 220, 191, 0.3);
