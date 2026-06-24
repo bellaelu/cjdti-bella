@@ -704,6 +704,72 @@ a:hover {
     color: white;
 }
 
+/* Sequential Intercept Model */
+.sim-section {
+    max-width: 900px;
+}
+
+.sim-figure {
+    margin: 0 0 1.25rem;
+    text-align: center;
+}
+
+.sim-image-link {
+    display: block;
+    line-height: 0;
+}
+
+.sim-image {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    background-color: #ffffff;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.sim-image-link:hover .sim-image {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.28);
+}
+
+.sim-caption {
+    margin-top: 0.75rem;
+    color: white;
+    font-style: normal;
+}
+
+.sim-label {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #F9DCBF;
+    margin-bottom: 0.35rem;
+}
+
+.sim-credit {
+    display: block;
+    font-size: 0.9rem;
+    line-height: 1.5;
+    color: rgba(255, 255, 255, 0.9);
+    font-style: normal;
+}
+
+.sim-credit a {
+    color: #F9DCBF;
+    text-decoration: underline;
+    word-break: break-word;
+}
+
+.sim-credit a:hover {
+    color: var(--uva-orange);
+}
+
+.sim-description {
+    text-align: left;
+    line-height: 1.6;
+}
+
 /* Impact section styles */
 .impact-text {
     background-color: rgba(249, 220, 191, 0.1);
@@ -854,15 +920,17 @@ a:hover {
     object-position: center 20%;
 }
 
-/* Team headshot framing — adjust scale and object-position per person */
+/* Team headshot framing — adjust scale and object-position per person 
+ X controls left/right — smaller % moves left, larger % moves right
+ Y controls up/down — smaller % moves up, larger % moves down */
 .team-image[alt="Peter Alonzi"] {
     transform: scale(1.6);
-    object-position: center 18%;
+    object-position: 18%, 70%;
 }
 
 .team-image[alt="Michael Smith"] {
     transform: scale(1.15);
-    object-position: 62% 20%;
+    object-position: 40% 20%;
 }
 
 .team-image[alt="Preston White"] {
@@ -871,18 +939,18 @@ a:hover {
 }
 
 .team-image[alt="Jonas Lee"] {
-    transform: scale(1.9);
-    object-position: center 8%;
+    transform: scale(1.7);
+    object-position: 8%, 70%;
 }
 
 .team-image[alt="Rachel Seo"] {
     transform: scale(1.15);
-    object-position: center 22%;
+    object-position: 22%, 35%;
 }
 
 .team-image[alt="Bella Lu"] {
     transform: scale(1.8);
-    object-position: center 50%;
+    object-position: 45%, 50%;
 }
 
 .team-name {
