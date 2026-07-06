@@ -925,12 +925,12 @@ a:hover {
  Y controls up/down — smaller % moves up, larger % moves down */
 .team-image[alt="Peter Alonzi"] {
     transform: scale(1.6);
-    object-position: 18% 90%;
+    object-position: 30% 97%;
 }
 
 .team-image[alt="Michael Smith"] {
     transform: scale(1.15);
-    object-position: 40% 30%;
+    object-position: 40% 40%;
 }
 
 .team-image[alt="Preston White"] {
@@ -940,12 +940,12 @@ a:hover {
 
 .team-image[alt="Jonas Lee"] {
     transform: scale(1.7);
-    object-position: 8% 80%;
+    object-position: 8% 90%;
 }
 
 .team-image[alt="Rachel Seo"] {
     transform: scale(1.15);
-    object-position: 22% 55%;
+    object-position: 22% 75%;
 }
 
 .team-image[alt="Bella Lu"] {
