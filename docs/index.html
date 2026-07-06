@@ -106,12 +106,6 @@
                 </div>
             </section>
 
-            <section class="content-section" id="impact">
-                <h2>Impact</h2>
-                <p class="impact-text"> CJDTI’s earliest pilot projects — examining court fees tied to driver's license suspensions in Virginia and the outcomes of the Therapeutic Docket — were the foundation for a broader portfolio of work with the growing network of community partnerships. Undergraduate students have since then led analyses on jail booking data, Home Electronic incarceration, high-frequency jail utilization patterns, police process efficiency, and potential jurisdiction expansion. Each project represents a bridge between a genuine need identified by the partners and a hands-on opportunity for students to apply their data science skills to important problems. CJDTI provides a rare opportunity: the chance to do consequential work that impacts real lives and real communities. For community partners, it means access to rigorous analysis that supports more informed evidence-based decisions. 
-                </p>
-            </section>
-
             <section class="content-section">
                 <h2>Partner Organizations</h2>
                 <div class="partner-logos">
@@ -457,7 +451,7 @@
             btn.addEventListener('click', () => switchTab(btn.dataset.tab));
         });
 
-        // Hero collage: fixed top-left; random image from manifest for other slots
+        // Hero collage: fixed top-left; random photo top-right; bottom row swaps papers/charts
         const collageSlotConfig = [
             {
                 slot: 'first',
@@ -466,10 +460,22 @@
                 alt: 'Professor Alonzi and student Isabella Lu',
                 type: 'photo'
             },
-            { slot: 'photos', folder: 'photos', manifestKey: 'photos', type: 'photo' },
-            { slot: 'papers', folder: 'papers', manifestKey: 'papers', type: 'paper' },
-            { slot: 'charts', folder: 'charts', manifestKey: 'charts', type: 'chart' }
+            { slot: 'photos', folder: 'photos', manifestKey: 'photos', type: 'photo' }
         ];
+
+        function getBottomCollageSlots() {
+            const papersSlot = { slot: 'bottom-left', folder: 'papers', manifestKey: 'papers', type: 'paper' };
+            const chartsSlot = { slot: 'bottom-right', folder: 'charts', manifestKey: 'charts', type: 'chart' };
+
+            if (Math.random() < 0.5) {
+                return [papersSlot, chartsSlot];
+            }
+
+            return [
+                { ...chartsSlot, slot: 'bottom-left' },
+                { ...papersSlot, slot: 'bottom-right' }
+            ];
+        }
 
         const browserImagePattern = /\.(jpe?g|png|webp|gif)$/i;
 
@@ -494,7 +500,9 @@
 
             collage.innerHTML = '';
 
-            collageSlotConfig.forEach(({ slot, folder, filename, manifestKey, alt, type }) => {
+            const slots = [...collageSlotConfig, ...getBottomCollageSlots()];
+
+            slots.forEach(({ slot, folder, filename, manifestKey, alt, type }) => {
                 const pool = filename
                     ? [filename]
                     : filterBrowserImages(manifest[manifestKey] || []);
