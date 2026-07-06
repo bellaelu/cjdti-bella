@@ -930,7 +930,7 @@ a:hover {
 
 .team-image[alt="Michael Smith"] {
     transform: scale(1.15);
-    object-position: 40% 30%;
+    object-position: 40% 20%;
 }
 
 .team-image[alt="Preston White"] {
@@ -940,12 +940,12 @@ a:hover {
 
 .team-image[alt="Jonas Lee"] {
     transform: scale(1.7);
-    object-position: 8% 40%;
+    object-position: 8% 30%;
 }
 
 .team-image[alt="Rachel Seo"] {
     transform: scale(1.15);
-    object-position: 22% 40%;
+    object-position: 22% 20%;
 }
 
 .team-image[alt="Bella Lu"] {
