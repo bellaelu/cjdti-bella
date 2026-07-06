@@ -930,7 +930,7 @@ a:hover {
 
 .team-image[alt="Michael Smith"] {
     transform: scale(1.15);
-    object-position: 40% 40%;
+    object-position: 40% 30%;
 }
 
 .team-image[alt="Preston White"] {
