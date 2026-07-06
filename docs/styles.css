@@ -765,7 +765,7 @@ a:hover {
     color: var(--uva-orange);
 }
 
-.sim-description {
+.sim-section .sim-description {
     text-align: center;
     line-height: 1.6;
 }
