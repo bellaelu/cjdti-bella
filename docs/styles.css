@@ -777,6 +777,30 @@ a:hover {
     white-space: pre-line; /* Respect line breaks inside the Impact text */
 }
 
+.publications-callout {
+    background-color: rgba(249, 220, 191, 0.1);
+    border-left: 4px solid #F9DCBF;
+    padding: 1rem 1.25rem;
+    border-radius: 4px;
+    margin: 1.25rem 0 0.5rem;
+}
+
+.publications-callout p {
+    margin-bottom: 0;
+    line-height: 1.6;
+    color: white;
+}
+
+.publications-callout a {
+    color: #F9DCBF;
+    font-weight: 600;
+    text-decoration: underline;
+}
+
+.publications-callout a:hover {
+    color: var(--uva-orange);
+}
+
 .partner-logos {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
