@@ -780,25 +780,36 @@ a:hover {
 .publications-callout {
     background-color: rgba(249, 220, 191, 0.1);
     border-left: 4px solid #F9DCBF;
-    padding: 1rem 1.25rem;
+    padding: 1.25rem 1.5rem;
     border-radius: 4px;
     margin: 1.25rem 0 0.5rem;
+    text-align: center;
 }
 
 .publications-callout p {
-    margin-bottom: 0;
+    margin-bottom: 1rem;
     line-height: 1.6;
     color: white;
+    text-align: center;
 }
 
-.publications-callout a {
-    color: #F9DCBF;
+.publications-callout-button {
+    display: inline-block;
+    background-color: var(--uva-orange);
+    color: #ffffff;
     font-weight: 600;
-    text-decoration: underline;
+    font-size: 0.95rem;
+    padding: 0.65rem 1.4rem;
+    border-radius: 6px;
+    text-decoration: none;
+    transition: background-color 0.2s ease, transform 0.2s ease;
 }
 
-.publications-callout a:hover {
-    color: var(--uva-orange);
+.publications-callout-button:hover {
+    background-color: #c96100;
+    color: #ffffff;
+    text-decoration: none;
+    transform: translateY(-1px);
 }
 
 .partner-logos {
