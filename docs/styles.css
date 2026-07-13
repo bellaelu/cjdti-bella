@@ -780,6 +780,7 @@ a:hover {
 .publications-callout {
     background-color: rgba(249, 220, 191, 0.1);
     border-left: 4px solid #F9DCBF;
+    border-right: 4px solid #F9DCBF;
     padding: 1.25rem 1.5rem;
     border-radius: 4px;
     margin: 1.25rem 0 0.5rem;
